@@ -1,0 +1,26 @@
+{
+  "name": "zzyworks",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattzteh/keebfans.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattzteh/keebfans/issues"
+  },
+  "homepage": "https://github.com/mattzteh/keebfans#readme",
+  "engines": {
+  "node": "16.x"
+}
+
+}

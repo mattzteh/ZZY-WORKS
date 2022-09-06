@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import './LoginForm.css';
 
 function LoginFormPage() {
@@ -33,31 +33,54 @@ function LoginFormPage() {
 
   return (
     <>
-      <h1>Log In</h1>
+    <div className="form">
+
+      <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <ul>
-          {errors.map(error => <li key={error}>{error}</li>)}
+        <ul className="errorbox">
+          {errors.map(error => <li className="errors" key={error}>{error}</li>)}
         </ul>
-        <label>
-          Email
-          <input
-            type="text"
-            value={credential}
-            onChange={(e) => setCredential(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Password
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
-        <button type="submit">Log In</button>
+
+        <div className="email">
+          <label>
+            EMAIL
+            <br/>
+            <input
+              type="text"
+              value={credential}
+              onChange={(e) => setCredential(e.target.value)}
+              required
+              />
+          </label>
+        </div>
+
+        <div className="password">
+          <label>
+            PASSWORD
+            <br/>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              />
+          </label>
+        </div>
+
+        <div className="login">
+          <button type="submit">Sign In</button>
+        </div>
+        <div className="demo">
+          <button type="submit" onClick={() => dispatch(sessionActions.login({credential:"demo-lition@gmail.com", password:"password"}))}>Demo</button>
+        </div>
+
       </form>
+
+      <div className="signup">
+        <Link to="/signup" style={{ textDecoration: 'none' }}><p>Create Account</p></Link>
+      </div>
+ 
+    </div>
     </>
   );
 }

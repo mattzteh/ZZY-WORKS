@@ -1,0 +1,118 @@
+
+* {
+    box-sizing: border-box;
+    font-family: "Varela Round";
+}
+
+h1 {
+    font-weight: lighter;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    padding: none;
+    color: #e8e8e1;
+    background-color: black;
+    height: 40px;
+    width: 350px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login button {
+    border: none;
+    color: #e8e8e1;
+    background-color: black;
+    cursor: pointer;
+}
+
+.demo {
+    display: flex;
+    justify-content: center;
+    padding: none;
+    color: #e8e8e1;
+    background-color: black;
+    height: 40px;
+    width: 350px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.demo button {
+    border: none;
+    color: #e8e8e1;
+    background-color: black;
+    cursor: pointer;
+}
+
+.email {
+    margin: 10px;
+    padding: 5px;
+    font-weight: lighter;
+}
+
+.password {
+    margin: 10px;
+    padding: 5px;
+    font-weight: lighter;
+}
+
+.email input {
+    width: 350px;
+    height: 35px;
+    margin-top: 5px;
+    border: solid rgb(233, 233, 233);
+    outline: none;
+}
+
+.password input {
+    width: 350px;
+    height: 35px;
+    margin-top: 5px;
+    border: solid rgb(233, 233, 233);
+    outline: none;
+}
+
+.signup p {
+    color: black
+}
+
+.errorbox {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.errors {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    list-style: none;
+    text-decoration: none;
+    color: red;
+    border: 1px solid red;
+    padding: 10px;
+    width: 350px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
-import LoginFormModal from '../LoginFormModal';
+// import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
 
 function Navigation() {
@@ -16,19 +16,31 @@ function Navigation() {
   } else {
     sessionLinks = (
       <>
-        <LoginFormModal />
-        <NavLink to="/signup">Sign Up</NavLink>
+        {/* <LoginFormModal /> */}
+        <NavLink to="/login"><i class="fa-regular fa-user"></i></NavLink>
       </>
     );
   }
 
   return (
+  <>
+  <div className="navigation">
     <ul>
-      <li>
-        <NavLink exact to="/">Home</NavLink>
-        {sessionLinks}
+      <li className='navitems'>
+        <NavLink exact to="/" style={{ textDecoration: 'none' }}><h1 className='name'>ZZY WORKS</h1></NavLink>
+        <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='store'>Store</div></NavLink>
+        <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='catalog'>Catalog</div></NavLink>
+        <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='studio'>Studio</div></NavLink>
+        <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='updates'>Updates</div></NavLink>
+       
+        <div className='icons'>
+          {sessionLinks}
+        </div>
+
       </li>
     </ul>
+  </div>
+  </>
   );
 }
 

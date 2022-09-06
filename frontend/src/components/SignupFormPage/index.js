@@ -3,10 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import './SignupForm.css';
+import { Link } from "react-router-dom";
 
 function SignupFormPage() {
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -16,9 +19,9 @@ function SignupFormPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password === confirmPassword) {
+    // if (password === confirmPassword) {
       setErrors([]);
-      return dispatch(sessionActions.signup({ email, password }))
+      return dispatch(sessionActions.signup({ firstName, lastName, email, password }))
         .catch(async (res) => {
         let data;
         try {
@@ -31,46 +34,87 @@ function SignupFormPage() {
         else if (data) setErrors([data]);
         else setErrors([res.statusText]);
       });
-    }
-    return setErrors(['Confirm Password field must be the same as the Password field']);
+    // }
+    // return setErrors(['Confirm Password field must be the same as the Password field']);
   };
 
   return (
     <>
-      <h1>Sign Up</h1>
+    <div className="form">
+
+      <h1>Create Account</h1>
       <form onSubmit={handleSubmit}>
-        <ul>
-          {errors.map((error) => <li key={error}>{error}</li>)}
+        <ul className="errorbox">
+          {errors.map((error) => <li className="errors" key={error}>{error}</li>)}
         </ul>
+        <div className="first-name">
+          <label>
+            FIRST NAME
+            <br/>
+            <input
+              type="text"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              required
+              />
+          </label>
+        </div>
+
+        <div className="last-name">
+
+          <label>
+            LAST NAME
+            <br/>
+            <input
+              type="text"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              required
+              />
+          </label>
+          </div>
+
+        <div className="email">
+
+          <label>
+            EMAIL
+            <br/>
+            <input
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              />
+          </label>
+        </div>
+
+      <div className="password">
+
         <label>
-          Email
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Password
+          PASSWORD
+          <br/>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-          />
+            />
         </label>
-        <label>
+      </div>
+        {/* <label>
           Confirm Password
           <input
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
-          />
-        </label>
+            />
+        </label> */}
+      <div className="login">
         <button type="submit">Sign Up</button>
+      </div>
       </form>
+    </div>
     </>
   );
 }

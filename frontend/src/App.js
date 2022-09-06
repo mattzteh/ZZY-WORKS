@@ -3,6 +3,8 @@ import { Route, Switch } from "react-router-dom";
 import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
+import Home from "./components/Home";
+import UserShowPage from "./components/UserShowPage";
 
 function App() {
 
@@ -15,6 +17,12 @@ function App() {
       </Route>
       <Route path="/signup">
         <SignupFormPage />
+      </Route>
+      <Route path="/users/:id">
+        <UserShowPage />
+      </Route>
+      <Route exact path="/">
+        <Home/>
       </Route>
     </Switch>
   </>

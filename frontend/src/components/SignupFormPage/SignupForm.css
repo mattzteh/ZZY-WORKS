@@ -1,0 +1,30 @@
+.first-name {
+    margin: 10px;
+    padding: 5px;
+}
+
+.last-name {
+    margin: 10px;
+    padding: 5px;
+}
+
+.first-name input {
+    width: 350px;
+    height: 35px;
+    margin-top: 5px;
+    border: solid rgb(233, 233, 233);
+    outline: none;
+}
+
+.last-name input {
+    width: 350px;
+    height: 35px;
+    margin-top: 5px;
+    border: solid rgb(233, 233, 233);
+    outline: none;
+}
+
+.signup {
+    color: black;
+    text-decoration: none;
+}

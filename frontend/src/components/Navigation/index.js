@@ -39,6 +39,8 @@ function Navigation() {
        
           <div className='icons'>
             {sessionLinks}
+            <NavLink to="/" className="search"><i className="fa-solid fa-magnifying-glass"></i></NavLink>
+            <NavLink to="/" className="cart"><i className="fa-solid fa-cart-shopping"></i></NavLink>
           </div>
 
         </div>

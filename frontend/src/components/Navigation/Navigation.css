@@ -17,9 +17,13 @@
 .navigation {
     border-bottom: solid rgb(237, 230, 230) 1px;
     color: #1c1d1d;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     padding-top: 20px;
     padding-bottom: 15px;
+    z-index: 10000;
+    position: sticky;
+    top: 0px;
+    width: 100%;
 }
 
 .name {

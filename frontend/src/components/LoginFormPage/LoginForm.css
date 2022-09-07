@@ -7,6 +7,7 @@
 .form-title {
     font-weight: lighter;
     font-size: 35px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -15,6 +16,7 @@
     align-items: center;
     flex-direction: column;
     color: #1c1d1d;
+    overflow: auto;
 }
 
 .login {

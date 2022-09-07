@@ -342,6 +342,224 @@ deskmat.photos.attach(
   filename: "MATS_PHOTO_1.webp"
 )
 
+deskmat.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/MATS_PHOTO_2.webp"),
+  filename: "MATS_PHOTO_2.webp"
+)
+
+deskmat.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/MATS_PHOTO_3.webp"),
+  filename: "MATS_PHOTO_3.webp"
+)
+
+#-------------------------------------------------------------------------------
+
+microfiber = Product.create(
+  name: 'RW ULTRASOFT XL MICROFIBER',
+  price: '$12',
+  description: 'An XL-sized microfiber cloth. Great for wrapping your keyboard 
+  in, cleaning your glasses or keeping handy in your bag. '
+)
+
+microfiber.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/MICROFIBER_PHOTO_1.webp"),
+  filename: "MICROFIBER_PHOTO_1.webp"
+)
+
+microfiber.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/MICROFIBER_PHOTO_2.webp"),
+  filename: "MICROFIBER_PHOTO_2.webp"
+)
+
+microfiber.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/MICROFIBER_PHOTO_3.webp"),
+  filename: "MICROFIBER_PHOTO_3.webp"
+)
+
+#-------------------------------------------------------------------------------
+
+sweater = Product.create(
+  name: 'SWEATER',
+  price: '$50',
+  description: 'Styles:
+  YOLK (TEAM EDITION): Puffy Heat Transfer Graphics
+  KURO: Embroidered Graphics
+  MOON: Embroidered Graphics
+
+  Extras:
+  Each comes packed in a RAMA WORKS® Dust Bag
+
+  Material:
+  95% Cotton
+  5% Spandex
+
+  Fleeced Lining',
+  size: 'Medium'
+)
+
+sweater.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/SWEATER_PHOTO_1.webp"),
+  filename: "SWEATER_PHOTO_1.webp"
+)
+
+sweater.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/SWEATER_PHOTO_2.webp"),
+  filename: "SWEATER_PHOTO_2.webp"
+)
+
+sweater.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/SWEATER_PHOTO_3.webp"),
+  filename: "SWEATER_PHOTO_3.webp"
+)
+
+#-------------------------------------------------------------------------------
+
+switchpuller = Product.create(
+  name: 'Switchpuller XO SEQ2',
+  price: '$9',
+  description: 'Product Description:
+  The Switchpuller XO SEQ2 is now thicker to improve rigidity while still 
+  removing switches with ease and precision. Now featured in the SOYA colourway 
+  with a textured matte finish, classic laser-etched product code, and 
+  relocated X and O cutouts.'
+)
+
+switchpuller.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/SWITCHPULLER_PHOTO_1.webp"),
+  filename: "SWITCHPULLER_PHOTO_1.webp"
+)
+
+switchpuller.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/SWITCHPULLER_PHOTO_2.webp"),
+  filename: "SWITCHPULLER_PHOTO_2.webp"
+)
+
+#-------------------------------------------------------------------------------
+
+team_cap = Product.create(
+  name: 'TEAM CAP',
+  price: '$27',
+  description: 'Featuring sandwich brim design with embroidered RAMA WORKS 
+  branding across. The underside is laser-cut with X detail with signature 
+  YOLK colouring beneath. Finished with a RAMA Logo embossed on the 
+  rear-adjuster.'
+)
+
+team_cap.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TEAMCAP_PHOTO_1.webp"),
+  filename: "TEAMCAP_PHOTO_1.webp"
+)
+
+team_cap.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TEAMCAP_PHOTO_2.webp"),
+  filename: "TEAMCAP_PHOTO_2.webp"
+)
+
+team_cap.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TEAMCAP_PHOTO_3.webp"),
+  filename: "TEAMCAP_PHOTO_3.webp"
+)
+
+#-------------------------------------------------------------------------------
+
+team_shirt = Product.create(
+  name: 'TEAM SHIRT',
+  price: '$35',
+  description: 'Styles:
+  KURO: Puffy Heat Transfer Graphics
+
+  Extras:
+  Each comes packed in a RAMA WORKS® Dust Bag
+
+  Material:
+  95% Cotton
+  5% Spandex',
+  size: 'medium'
+)
+
+team_shirt.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TEAMSHIRT_PHOTO_1.webp"),
+  filename: "TEAMSHIRT_PHOTO_1.webp"
+)
+
+team_shirt.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TEAMSHIRT_PHOTO_2.webp"),
+  filename: "TEAMSHIRT_PHOTO_2.webp"
+)
+
+team_shirt.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TEAMSHIRT_PHOTO_3.webp"),
+  filename: "TEAMSHIRT_PHOTO_3.webp"
+)
+
+#-------------------------------------------------------------------------------
+
+t_shirt = Product.create(
+  name: "RAMA'S BURGERS T-SHIRT",
+  price: '$38',
+  description: 'Material:
+  Premium heavyweight soft 100% Cotton Tee.
+
+  Silkscreened artwork.
+
+  Made in Melbourne.'
+)
+
+t_shirt.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TSHIRT_PHOTO_1.webp"),
+  filename: "TSHIRT_PHOTO_1.webp"
+)
+
+t_shirt.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TSHIRT_PHOTO_2.webp"),
+  filename: "TSHIRT_PHOTO_2.webp"
+)
+
+t_shirt.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TSHIRT_PHOTO_3.webp"),
+  filename: "TSHIRT_PHOTO_3.webp"
+)
+
+#-------------------------------------------------------------------------------
+
+u80a = Product.create(
+  name: 'U80-A SEQ2 Mute (Extra)',
+  price: '$45',
+  description: 'Product Description:
+  Extra MUTE mount for the U80-A, non-conductive silicone. Need a spare? Making another plate? '
+)
+
+u80a.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/U80A_SEQ2_MUTE_PHOTO_1.webp"),
+  filename: "U80A_SEQ2_MUTE_PHOTO_1.webp"
+)
+
+xo_cap = Product.create(
+  name: 'XO CAP',
+  price: '$42',
+  description: 'Styles:
+  Featuring sandwich brim design with embroidered subtle black RAMA WORKS 
+  branding across. Constructed entirely from our custom XO jacquard fabric. 
+  And finished with the RAMA Logo debossed on the rear-adjuster.'
+)
+
+xo_cap.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/XO_CAP_PHOTO_1.webp"),
+  filename: "XO_CAP_PHOTO_1.webp"
+)
+
+xo_cap.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/XO_CAP_PHOTO_2.webp"),
+  filename: "XO_CAP_PHOTO_2.webp"
+)
+
+xo_cap.photos.attach(
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/XO_CAP_PHOTO_3.jpeg"),
+  filename: "XO_CAP_PHOTO_3.jpeg"
+)
+
+#-------------------------------------------------------------------------------
+
 
 
 puts "Done!"

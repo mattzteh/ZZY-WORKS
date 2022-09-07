@@ -35,7 +35,7 @@ function LoginFormPage() {
     <>
     <div className="form">
 
-      <h1>Login</h1>
+      <h1 className="form-title">Login</h1>
       <form onSubmit={handleSubmit}>
         <ul className="errorbox">
           {errors.map(error => <li className="errors" key={error}>{error}</li>)}
@@ -67,12 +67,8 @@ function LoginFormPage() {
           </label>
         </div>
 
-        <div className="login">
-          <button type="submit">Sign In</button>
-        </div>
-        <div className="demo">
-          <button type="submit" onClick={() => dispatch(sessionActions.login({credential:"demo-lition@gmail.com", password:"password"}))}>Demo</button>
-        </div>
+          <button className="login" type="submit">Sign In</button>
+          <button className="demo" type="submit" onClick={() => dispatch(sessionActions.login({credential:"demo-lition@gmail.com", password:"password"}))}>Demo</button>
 
       </form>
 

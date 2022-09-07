@@ -42,7 +42,7 @@ function SignupFormPage() {
     <>
     <div className="form">
 
-      <h1>Create Account</h1>
+      <h1 className="form-title">Create Account</h1>
       <form onSubmit={handleSubmit}>
         <ul className="errorbox">
           {errors.map((error) => <li className="errors" key={error}>{error}</li>)}
@@ -101,18 +101,7 @@ function SignupFormPage() {
             />
         </label>
       </div>
-        {/* <label>
-          Confirm Password
-          <input
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-            />
-        </label> */}
-      <div className="login">
-        <button type="submit">Sign Up</button>
-      </div>
+        <button className="login" type="submit">Sign Up</button>
       </form>
     </div>
     </>

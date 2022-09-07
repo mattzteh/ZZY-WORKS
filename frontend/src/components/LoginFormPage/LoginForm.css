@@ -4,7 +4,7 @@
     font-family: "Varela Round";
 }
 
-h1 {
+.form-title {
     font-weight: lighter;
     font-size: 35px;
     margin-bottom: 20px;
@@ -14,11 +14,13 @@ h1 {
     display: flex;
     align-items: center;
     flex-direction: column;
+    color: #1c1d1d;
 }
 
 .login {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: none;
     color: #e8e8e1;
     background-color: black;
@@ -27,18 +29,16 @@ h1 {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.login button {
+    cursor: pointer;
     border: none;
     color: #e8e8e1;
     background-color: black;
-    cursor: pointer;
 }
 
 .demo {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: none;
     color: #e8e8e1;
     background-color: black;
@@ -47,14 +47,13 @@ h1 {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 50px;
-}
-
-.demo button {
     border: none;
     color: #e8e8e1;
     background-color: black;
     cursor: pointer;
 }
+
+
 
 .email {
     margin: 10px;
@@ -99,6 +98,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-content: center;
+    text-align: center;
     list-style: none;
     text-decoration: none;
     color: red;

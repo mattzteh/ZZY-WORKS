@@ -11,13 +11,13 @@ function Navigation() {
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
+      // <NavLink to="/"><i class="fa-regular fa-user"></i></NavLink>
       <ProfileButton user={sessionUser} />
     );
   } else {
     sessionLinks = (
       <>
-        {/* <LoginFormModal /> */}
-        <NavLink to="/login"><i class="fa-regular fa-user"></i></NavLink>
+        <NavLink to="/login"><i className="fa-regular fa-user"></i></NavLink>
       </>
     );
   }
@@ -27,15 +27,22 @@ function Navigation() {
   <div className="navigation">
     <ul>
       <li className='navitems'>
-        <NavLink exact to="/" style={{ textDecoration: 'none' }}><h1 className='name'>ZZY WORKS</h1></NavLink>
-        <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='store'>Store</div></NavLink>
-        <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='catalog'>Catalog</div></NavLink>
-        <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='studio'>Studio</div></NavLink>
-        <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='updates'>Updates</div></NavLink>
-       
-        <div className='icons'>
-          {sessionLinks}
+        <div className='nav-name'>
+          <NavLink exact to="/" style={{ textDecoration: 'none' }}><h1 className='name'>ZZY WORKS</h1></NavLink>
+          <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='store'>Store</div></NavLink>
+          <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='catalog'>Catalog</div></NavLink>
+          <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='studio'>Studio</div></NavLink>
+          <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='updates'>Updates</div></NavLink>
         </div>
+
+        <div className='nav-links'>
+       
+          <div className='icons'>
+            {sessionLinks}
+          </div>
+
+        </div>
+
 
       </li>
     </ul>

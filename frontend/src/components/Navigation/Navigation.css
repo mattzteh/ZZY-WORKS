@@ -50,23 +50,27 @@
     cursor: default;
     color: black;
     padding: 20px;
+    cursor: pointer;
 }
 .catalog {
     cursor: default;
     color: black;
     padding: 20px;
+    cursor: pointer;
 }
 
 .studio {
     cursor: default;
     color: black;
     padding: 20px;
+    cursor: pointer;
 }
 
 .updates {
     cursor: default;
     color: black;
     padding: 20px;
+    cursor: pointer;
 }
 
 .icons {

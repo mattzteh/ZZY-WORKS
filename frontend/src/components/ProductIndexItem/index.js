@@ -1,15 +1,18 @@
-import { useDispatch } from "react-redux"
-
+import './ProductIndexItem.css';
+import {useState} from "react";
+import { Link } from 'react-router-dom';
 
 const ProductIndexPage = ({product}) => {
-    const dispatch = useDispatch();
+    
+    const photo = product.photoUrl[2]? product.photoUrl[2] : product.photoUrl[0];
 
     return (
-
-    <div>
-        <img src={product.photoUrl}/>
-        {console.log(product.photoUrl[0])}
-        <h1>{product.name}</h1>
+    <div className='index-area'>
+        <div className='product-index'>
+            <Link to={`/products/${product.id}`}><img className='product-photo' src={photo}/></Link>
+            <h1>{product.name}</h1>
+            <h2>{product.price}</h2>
+        </div>
     </div>
 
     )

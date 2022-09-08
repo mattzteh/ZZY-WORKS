@@ -1,0 +1,12 @@
+
+.products ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.products ul li {
+    list-style: none;
+    flex-basis: 28%;
+    flex-direction: column;
+}

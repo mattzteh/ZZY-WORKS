@@ -1,0 +1,18 @@
+.index-area {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.product-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.product-photo {
+    width: 20vw;
+    height: auto;
+    margin: auto;
+}
+

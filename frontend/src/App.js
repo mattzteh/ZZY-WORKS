@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation";
 import Home from "./components/Home";
 import UserShowPage from "./components/UserShowPage";
 import ProductIndexPage from "./components/ProductIndexPage";
+import ProductShowPage from "./components/ProductShowPage";
 
 function App() {
 
@@ -21,6 +22,9 @@ function App() {
       </Route>
       <Route path="/store">
         <ProductIndexPage />
+      </Route>
+      <Route path="/products/:productId">
+        <ProductShowPage />
       </Route>
       <Route path="/users/:id">
         <UserShowPage />

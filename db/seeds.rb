@@ -10,8 +10,8 @@ require 'open-uri'
 ApplicationRecord.transaction do 
   puts "Destroying tables..."
   # Unnecessary if using `rails db:seed:replant`
-  User.destroy_all
   Product.destroy_all
+  User.destroy_all
   puts "Resetting primary keys..."
   # For easy testing, so that after seeding, the first `User` has `id` of 1
   ApplicationRecord.connection.reset_pk_sequence!('users')
@@ -49,8 +49,8 @@ duck_switches = Product.create(
   )
   
 duck_switches.photos.attach(
-  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/M60_splash.webp"), 
-  filename: "M60_splash.webp"
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/DUCK_SWITCHES.webp"), 
+  filename: "DUCK_SWITCHES.webp"
 )
 
 #-------------------------------------------------------------------------------

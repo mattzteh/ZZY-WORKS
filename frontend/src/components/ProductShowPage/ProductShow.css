@@ -55,13 +55,14 @@
 }
 
 .desc-button {
-    font-size: 14px;
-    display: flex;
-    border-style: none;
-}
-
-
-.collapse {
+    font-size: 18px;
     display: flex;
     justify-content: space-between;
+    border-style: none;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.collapse-content {
+    line-height: 1.5rem;
 }

@@ -40,8 +40,8 @@ const ProductShowPage = () => {
                         <button className='desc-button' onClick={() => setIsOpen(!isOpen)}>
                             DESCRIPTION
                             <div className='desc-icon'>{isOpen ? 
-                            <i class="fa-solid fa-arrow-down"></i> : 
-                            <i class="fa-solid fa-arrow-up"></i>                    
+                            <i class="fa-solid fa-arrow-up"></i> :               
+                            <i class="fa-solid fa-arrow-down"></i> 
                         }</div>
                             </button>
                             {isOpen && <div className='collapse-content'>{product.description}</div>}

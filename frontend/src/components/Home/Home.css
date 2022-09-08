@@ -2,55 +2,65 @@
     0% {
         transform: scale(1.2, 1.2);
     }
-
     50% {
         transform: scale(1.0, 1.0);
     }
-
     100% {
         transform: scale(1.0, 1.0);
     }
 }
 
 * {
-    background-color: #e6ded2
+    background-color: #e6ded2;
+    color: #1c1d1d;
+    font-family: 'Varela Round', 'sans-serif';
+    box-sizing: border-box;
 }
 
-.m60Splash {
+.splashpage img {
     width: 100vw;
-    position: relative;
     animation: zoominoutsinglefeatured 6s;
 }
 
-.splashtext1 {
-    position: absolute;
-    z-index: 1;
-    background-color: transparent;
-}
-
-.splashbutton1 {
-    position: absolute;
-    z-index: 1;
-    background-color: transparent;
-}
-
-.u80Splash {
-    width: 100vw;
+.m60, .u80 {
     position: relative;
-    animation: zoominoutsinglefeatured 5s;
 }
 
-.splashtext2 {
+.splashpage h1 {
+    font-size: 40px;
+    color: #ffffff;
+    background-color: transparent;
     position: absolute;
     z-index: 1;
-    background-color: transparent;
-    color: white;
 }
 
-.splashbutton2 {
+.m60 button, .u80 button {
     position: absolute;
+    bottom: 5px;
+    right: 5px;
     z-index: 1;
     background-color: transparent;
+    border-style: none;
+    border: solid #ffc80f 2px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffc80f;
+    padding: 11px 20px;
+    border-radius: 2em;
 }
+
+.m60 button:hover, .u80 button:hover {
+    background-color: #ffc80f;
+    -webkit-transition: background-color 400ms linear;
+    -ms-transition: background-color 400ms linear;
+    transition: background-color 400ms linear;
+    color: black;
+    -webkit-transition: color 400ms linear;
+    -ms-transition: color 400ms linear;
+    transition: color 400ms linear;
+}
+
+
+
 
 

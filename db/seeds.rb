@@ -37,7 +37,7 @@ ApplicationRecord.transaction do
 # OFFICIAL SEED DATA------------------------------------------------------------
 duck_switches = Product.create(
   name: 'DUCK Switches',
-  price: '$12',
+  price: 16,
   description: 'In development for over the past six months, we are excited to 
   introduce our latest innovation - the DUCK switch. Working closely with our 
   manufacturing partners, we have translated our MUTE mounting platform 
@@ -57,7 +57,7 @@ duck_switches.photos.attach(
   
 grid_set_a = Product.create(
   name: 'GRID Set A Keycaps',
-  price: '$42',
+  price: 16,
   description: 'Injection moulded, low-profile keycaps produced by RAMA WORKS®. 
   Available in single colour sets (62 caps) or a mixed set (108 caps)'
 )
@@ -81,7 +81,7 @@ grid_set_a.photos.attach(
 
 grid_set_b = Product.create(
   name: 'GRID Set B Keycaps',
-  price: '$42',
+  price: 16,
   description: 'Injection moulded, low-profile keycaps produced by RAMA WORKS®. 
   Available in single colour sets (62 caps) or a mixed set (100 caps)'
 )
@@ -105,7 +105,7 @@ grid_set_b.photos.attach(
 
 grid_set_c = Product.create(
   name: 'GRID Set C Keycaps',
-  price: '$42',
+  price: 16,
   description: 'Injection moulded, low-profile keycaps produced by RAMA WORKS®. 
   Available in single colour sets (62 caps) or a mixed set of select 
   SET A / B / C caps (108 caps)'
@@ -130,7 +130,7 @@ grid_set_c.photos.attach(
 
 kara_backplate = Product.create(
   name: 'KARA Backplate (Extra)',
-  price: '$26',
+  price: 16,
   description: 'NOTE: MATCHING BACKPLATE IS ALREADY INCLUDED WITH KARA. NOT COMPATIBLE WITH M60-A.'
 )
 
@@ -153,7 +153,7 @@ kara_backplate.photos.attach(
 
 kara_plate = Product.create(
   name: 'KARA Plate (Extra)',
-  price: '$16',
+  price: 16,
   description: 'NOTE: THE ICED PLATE IS ALREADY INCLUDED WITH KARA. NOT COMPATIBLE WITH M60-A. 
   KARA SUB-ASSEMBLY REQUIRES ALL 3 PARTS (PCB, MUTE, PLATE)
 
@@ -178,7 +178,7 @@ kara_plate.photos.attach(
 
 keycap = Product.create(
   name: 'WAVE SEQ2 Br Matte',
-  price: '$56',
+  price: 56,
   description: 'IN-STOCK - LIMITED RELEASE
 
 
@@ -233,7 +233,7 @@ keycap.photos.attach(
 
 m65_starter_kit = Product.create(
   name: 'M65-B Starter Kit',
-  price: '$38',
+  price: 38,
   description: 'Everything you need sans keycaps to make this a complete kit 
   with Aliaz 60g.'
 )
@@ -247,7 +247,7 @@ m65_starter_kit.photos.attach(
 
 m65_mute = Product.create(
   name: 'M65-B Mute (Extra)',
-  price: '$38',
+  price: 38,
   description: 'Extra MUTE mount for the M65-B, non-conductive silicone. 
   Need a spare? Making another plate? Moulded out of clear silicone to match 
   perfectly with the ICED variant.'
@@ -262,7 +262,7 @@ m65_mute.photos.attach(
 
 m65_pcb = Product.create(
   name: 'M65-B PCB (Extra)',
-  price: '$88',
+  price: 88,
   description: 'In an effort to provide the best end-user experience available, 
   this M65-B PCB requires no soldering to construct with any Cherry 
   MX-compatible switches. The M65-B offers a USB-C connection attached to the 
@@ -282,7 +282,7 @@ m65_pcb.photos.attach(
 
 m65_plate = Product.create(
   name: 'M65-B Plate (Extra)',
-  price: '$52',
+  price: 52,
   description: 'Product Description:
   Extra plate for the M65-B, Mirror-finished PVD Coated Brass, Anodised Aluminium or Frosted Polycarbonate.
 
@@ -324,7 +324,7 @@ m65_plate.photos.attach(
 
 deskmat = Product.create(
   name: 'MAT',
-  price: '$24',
+  price: 24,
   description: 'DESCRIPTION: 
   
   We are excited to introduce our new MATS, available exclusively through RAMA WORKS®. This improved desk mat comes in four different colourways, perfect for matching any keyboard and desk setup combination.
@@ -356,7 +356,7 @@ deskmat.photos.attach(
 
 microfiber = Product.create(
   name: 'RW ULTRASOFT XL MICROFIBER',
-  price: '$12',
+  price: 12,
   description: 'An XL-sized microfiber cloth. Great for wrapping your keyboard 
   in, cleaning your glasses or keeping handy in your bag. '
 )
@@ -380,7 +380,7 @@ microfiber.photos.attach(
 
 sweater = Product.create(
   name: 'SWEATER',
-  price: '$50',
+  price: 50,
   description: 'Styles:
   YOLK (TEAM EDITION): Puffy Heat Transfer Graphics
   KURO: Embroidered Graphics
@@ -416,7 +416,7 @@ sweater.photos.attach(
 
 switchpuller = Product.create(
   name: 'Switchpuller XO SEQ2',
-  price: '$9',
+  price: 9,
   description: 'Product Description:
   The Switchpuller XO SEQ2 is now thicker to improve rigidity while still 
   removing switches with ease and precision. Now featured in the SOYA colourway 
@@ -438,7 +438,7 @@ switchpuller.photos.attach(
 
 team_cap = Product.create(
   name: 'TEAM CAP',
-  price: '$27',
+  price: 27,
   description: 'Featuring sandwich brim design with embroidered RAMA WORKS 
   branding across. The underside is laser-cut with X detail with signature 
   YOLK colouring beneath. Finished with a RAMA Logo embossed on the 
@@ -464,7 +464,7 @@ team_cap.photos.attach(
 
 team_shirt = Product.create(
   name: 'TEAM SHIRT',
-  price: '$35',
+  price: 35,
   description: 'Styles:
   KURO: Puffy Heat Transfer Graphics
 
@@ -496,7 +496,7 @@ team_shirt.photos.attach(
 
 t_shirt = Product.create(
   name: "RAMA'S BURGERS T-SHIRT",
-  price: '$38',
+  price: 38,
   description: 'Material:
   Premium heavyweight soft 100% Cotton Tee.
 
@@ -524,7 +524,7 @@ t_shirt.photos.attach(
 
 u80a = Product.create(
   name: 'U80-A SEQ2 Mute (Extra)',
-  price: '$45',
+  price: 45,
   description: 'Product Description:
   Extra MUTE mount for the U80-A, non-conductive silicone. Need a spare? Making another plate? '
 )
@@ -536,7 +536,7 @@ u80a.photos.attach(
 
 xo_cap = Product.create(
   name: 'XO CAP',
-  price: '$42',
+  price: 42,
   description: 'Styles:
   Featuring sandwich brim design with embroidered subtle black RAMA WORKS 
   branding across. Constructed entirely from our custom XO jacquard fabric. 

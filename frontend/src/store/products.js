@@ -16,6 +16,7 @@ export const getProducts = state => {
 }
 
 export const getProduct = productId => state => {
+    // debugger
     return state?.products ? state.products[productId] : null;
 }
 
@@ -34,17 +35,23 @@ export const fetchProduct = (productId) => async dispatch => {
 
     if (response.ok) {
         const data = await response.json();
-        dispatch(receiveProduct(data));
-        return data;
+       dispatch(receiveProduct(data));
+        // data;
     }
 }
 
 const productsReducer = (state = {}, action) => {
+    Object.freeze(state);
+
+    let newState = Object.assign({},state)
+    // debugger
     switch (action.type) {
         case RECEIVE_PRODUCTS:
             return {...action.products};
         case RECEIVE_PRODUCT:
-            return {...state, [action.product.id]: action.product};
+            newState[action.product.id] = action.product
+            // return {...state, [action.product.id]: action.product};
+            return newState
         default:
             return state;
     }

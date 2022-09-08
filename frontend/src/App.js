@@ -30,7 +30,7 @@ function App() {
         <UserShowPage />
       </Route>
       <Route exact path="/">
-        <Home/>
+        <Home />
       </Route>
     </Switch>
   </>

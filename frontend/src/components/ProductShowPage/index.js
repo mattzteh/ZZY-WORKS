@@ -15,8 +15,7 @@ const ProductShowPage = () => {
     useEffect(() => {
         dispatch(fetchProduct(productId));
         
-    }, [productId]);
-    
+    }, [productId]);    
     
     const photo = product.photoUrl[2]? product.photoUrl[2] : product.photoUrl[0];
     // if(!product) return null;

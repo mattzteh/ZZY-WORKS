@@ -52,5 +52,6 @@ class User < ApplicationRecord
         self.session_token ||= generate_unique_session_token
     end
 
-    has_many :reviews
+    has_many :reviews,
+        dependent: :destroy
 end

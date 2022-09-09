@@ -25,7 +25,7 @@
 
 .name {
     font-size: 40px;
-    cursor: default;
+    cursor: pointer;
     font-weight:bold;
     color: black;
     padding-left: 100px;

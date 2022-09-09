@@ -10,11 +10,16 @@ require 'open-uri'
 ApplicationRecord.transaction do 
   puts "Destroying tables..."
   # Unnecessary if using `rails db:seed:replant`
+  Review.destroy_all
   Product.destroy_all
   User.destroy_all
   puts "Resetting primary keys..."
   # For easy testing, so that after seeding, the first `User` has `id` of 1
   ApplicationRecord.connection.reset_pk_sequence!('users')
+  ApplicationRecord.connection.reset_pk_sequence!('products')
+  ApplicationRecord.connection.reset_pk_sequence!('reviews')
+
+
 
   puts "Creating users..."
   # Create one user with an easy to remember username, email, and password:
@@ -560,7 +565,15 @@ xo_cap.photos.attach(
 
 #-------------------------------------------------------------------------------
 
+# REVIEWS SEEDS-----------------------------------------------------------------
 
+review_1 = Review.create(
+  title: 'Awesome!',
+  body: 'Would recommend!',
+  rating: 5,
+  product_id: 1,
+  user_id: 1
+)
 
 puts "Done!"
 end

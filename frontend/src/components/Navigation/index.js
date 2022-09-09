@@ -29,8 +29,8 @@ function Navigation() {
       <li className='navitems'>
         <div className='nav-name'>
           <NavLink exact to="/" style={{ textDecoration: 'none' }}><h1 className='name'>ZZY WORKS</h1></NavLink>
-          <NavLink exact to="/store" style={{ textDecoration: 'none' }}><div className='store'>Store</div></NavLink>
-          <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='catalog'>Catalog</div></NavLink>
+          <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='store'>Store</div></NavLink>
+          <NavLink exact to="/catalog" style={{ textDecoration: 'none' }}><div className='catalog'>Catalog</div></NavLink>
           <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='studio'>Studio</div></NavLink>
           <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='updates'>Updates</div></NavLink>
         </div>

@@ -68,7 +68,7 @@ function LoginFormPage() {
         </div>
 
           <button className="login" type="submit">Sign In</button>
-          <button className="demo" type="submit" onClick={() => dispatch(sessionActions.login({credential:"demo-lition@gmail.com", password:"password"}))}>Demo</button>
+          <button className="demo" type="submit" onClick={() => dispatch(sessionActions.login({credential:"demo@user.io", password:"password"}))}>Demo</button>
 
       </form>
 

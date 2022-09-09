@@ -8,6 +8,6 @@
 
 .products ul li {
     list-style: none;
-    flex-basis: 28%;
+    flex-basis: 26%;
     flex-direction: column;
 }

@@ -15,9 +15,11 @@ class Api::ReviewsController < ApplicationController
     end
 
     def update
+        
     end
 
     def destroy
+
     end
 
     def index

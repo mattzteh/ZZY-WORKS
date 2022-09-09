@@ -1,0 +1,31 @@
+.review-item {
+    margin: 0 15%;
+    /* border: solid #111111 2px; */
+    /* border-radius: 1em; */
+    padding: 25px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid grey;
+}
+
+.review-icons i {
+    margin: 0 10px;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.review-header + p {
+    line-height: 1.75rem;
+}
+
+.review-header + h4 {
+    color: grey;
+    margin-bottom: 20px;
+}

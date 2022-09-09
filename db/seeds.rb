@@ -67,20 +67,22 @@ grid_set_a = Product.create(
   Available in single colour sets (62 caps) or a mixed set (108 caps)'
 )
 
-grid_set_a.photos.attach(
+grid_set_a_1 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/GRID_SET_A_PHOTO_1.webp"),
   filename: "GRID_SET_A_PHOTO_1.webp"
-)
+}
 
-grid_set_a.photos.attach(
+grid_set_a_2 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/GRID_SET_A_PHOTO_2.webp"),
   filename: "GRID_SET_A_PHOTO_2.webp"
-)
+}
 
-grid_set_a.photos.attach(
+grid_set_a_3 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/GRID_SET_A_PHOTO_3.webp"),
   filename: "GRID_SET_A_PHOTO_3.webp"
-)
+}
+
+grid_set_a.photos.attach([grid_set_a_1, grid_set_a_2, grid_set_a_3])
 
 #-------------------------------------------------------------------------------
 
@@ -91,20 +93,22 @@ grid_set_b = Product.create(
   Available in single colour sets (62 caps) or a mixed set (100 caps)'
 )
 
-grid_set_b.photos.attach(
+grid_set_b_1 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/GRID_SET_B_PHOTO_1.webp"),
   filename: "GRID_SET_B_PHOTO_1.webp"
-)
+}
 
-grid_set_b.photos.attach(
+grid_set_b_2 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/GRID_SET_B_PHOTO_2.webp"),
   filename: "GRID_SET_B_PHOTO_2.webp"
-)
+}
 
-grid_set_b.photos.attach(
+grid_set_b_3 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/GRID_SET_B_PHOTO_3.webp"),
   filename: "GRID_SET_B_PHOTO_3.webp"
-)
+}
+
+grid_set_b.photos.attach([grid_set_b_1, grid_set_b_2, grid_set_b_3])
 
 #-------------------------------------------------------------------------------
 
@@ -116,20 +120,22 @@ grid_set_c = Product.create(
   SET A / B / C caps (108 caps)'
 )
 
-grid_set_c.photos.attach(
+grid_set_c_1 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/GRID_SET_C_PHOTO_1.webp"),
   filename: "GRID_SET_C_PHOTO_1.webp"
-)
+}
 
-grid_set_c.photos.attach(
+grid_set_c_2 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/GRID_SET_C_PHOTO_2.webp"),
   filename: "GRID_SET_C_PHOTO_2.webp"
-)
+}
 
-grid_set_c.photos.attach(
+grid_set_c_3 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/GRID_SET_C_PHOTO_3.webp"),
   filename: "GRID_SET_C_PHOTO_3.webp"
-)
+}
+
+grid_set_c.photos.attach([grid_set_c_1, grid_set_c_2, grid_set_c_3])
 
 #-------------------------------------------------------------------------------
 
@@ -139,20 +145,22 @@ kara_backplate = Product.create(
   description: 'NOTE: MATCHING BACKPLATE IS ALREADY INCLUDED WITH KARA. NOT COMPATIBLE WITH M60-A.'
 )
 
-kara_backplate.photos.attach(
+kara_backplate_1 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/KARA_BACKPLATE_PHOTO_1.webp"),
   filename: "KARA_BACKPLATE_PHOTO_1.webp"
-)
+}
 
-kara_backplate.photos.attach(
+kara_backplate_2 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/KARA_BACKPLATE_PHOTO_2.webp"),
   filename: "KARA_BACKPLATE_PHOTO_2.webp"
-)
+}
 
-kara_backplate.photos.attach(
+kara_backplate_3 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/KARA_BACKPLATE_PHOTO_3.webp"),
   filename: "KARA_BACKPLATE_PHOTO_3.webp"
-)
+}
+
+kara_backplate.photos.attach([kara_backplate_1, kara_backplate_2, kara_backplate_3])
 
 #-------------------------------------------------------------------------------
 
@@ -219,20 +227,22 @@ keycap = Product.create(
   Cherry Profile - Escape Row (R1)'
 )
 
-keycap.photos.attach(
+keycap_1 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/KEYCAP_PHOTO_1.webp"),
   filename: "KEYCAP_PHOTO_1.webp"
-)
+}
 
-keycap.photos.attach(
+keycap_2 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/KEYCAP_PHOTO_2.webp"),
   filename: "KEYCAP_PHOTO_2.webp"
-)
+}
   
-keycap.photos.attach(
+keycap_3 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/KEYCAP_PHOTO_3.webp"),
   filename: "KEYCAP_PHOTO_3.webp"
-)
+}
+
+keycap.photos.attach([keycap_1, keycap_2, keycap_3])
 
 #-------------------------------------------------------------------------------
 
@@ -342,20 +352,22 @@ deskmat = Product.create(
   Cloth Top - 100% polyester, which is soft to touch and perfect for your mouse to glide on'
 )
 
-deskmat.photos.attach(
+deskmat_1 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/MATS_PHOTO_1.webp"),
   filename: "MATS_PHOTO_1.webp"
-)
+}
 
-deskmat.photos.attach(
+deskmat_2 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/MATS_PHOTO_2.webp"),
   filename: "MATS_PHOTO_2.webp"
-)
+}
 
-deskmat.photos.attach(
+deskmat_3 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/MATS_PHOTO_3.webp"),
   filename: "MATS_PHOTO_3.webp"
-)
+}
+
+deskmat.photos.attach([deskmat_1, deskmat_2, deskmat_3])
 
 #-------------------------------------------------------------------------------
 
@@ -366,20 +378,22 @@ microfiber = Product.create(
   in, cleaning your glasses or keeping handy in your bag. '
 )
 
-microfiber.photos.attach(
+microfiber_1 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/MICROFIBER_PHOTO_1.webp"),
   filename: "MICROFIBER_PHOTO_1.webp"
-)
+}
 
-microfiber.photos.attach(
+microfiber_2 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/MICROFIBER_PHOTO_2.webp"),
   filename: "MICROFIBER_PHOTO_2.webp"
-)
+}
 
-microfiber.photos.attach(
+microfiber_3 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/MICROFIBER_PHOTO_3.webp"),
   filename: "MICROFIBER_PHOTO_3.webp"
-)
+}
+
+microfiber.photos.attach([microfiber_1, microfiber_2, microfiber_3])
 
 #-------------------------------------------------------------------------------
 
@@ -402,20 +416,22 @@ sweater = Product.create(
   size: 'Medium'
 )
 
-sweater.photos.attach(
+sweater_1 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/SWEATER_PHOTO_1.webp"),
   filename: "SWEATER_PHOTO_1.webp"
-)
+}
 
-sweater.photos.attach(
+sweater_2 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/SWEATER_PHOTO_2.webp"),
   filename: "SWEATER_PHOTO_2.webp"
-)
+}
 
-sweater.photos.attach(
+sweater_3 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/SWEATER_PHOTO_3.webp"),
   filename: "SWEATER_PHOTO_3.webp"
-)
+}
+
+sweater.photos.attach([sweater_1, sweater_2, sweater_3])
 
 #-------------------------------------------------------------------------------
 
@@ -429,15 +445,17 @@ switchpuller = Product.create(
   relocated X and O cutouts.'
 )
 
-switchpuller.photos.attach(
+switchpuller_1 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/SWITCHPULLER_PHOTO_1.webp"),
   filename: "SWITCHPULLER_PHOTO_1.webp"
-)
+}
 
-switchpuller.photos.attach(
+switchpuller_2 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/SWITCHPULLER_PHOTO_2.webp"),
   filename: "SWITCHPULLER_PHOTO_2.webp"
-)
+}
+
+switchpuller.photos.attach([switchpuller_1, switchpuller_2])
 
 #-------------------------------------------------------------------------------
 
@@ -450,20 +468,22 @@ team_cap = Product.create(
   rear-adjuster.'
 )
 
-team_cap.photos.attach(
+team_cap_1 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TEAMCAP_PHOTO_1.webp"),
   filename: "TEAMCAP_PHOTO_1.webp"
-)
+}
 
-team_cap.photos.attach(
+team_cap_2 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TEAMCAP_PHOTO_2.webp"),
   filename: "TEAMCAP_PHOTO_2.webp"
-)
+}
 
-team_cap.photos.attach(
+team_cap_3 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TEAMCAP_PHOTO_3.webp"),
   filename: "TEAMCAP_PHOTO_3.webp"
-)
+}
+
+team_cap.photos.attach([team_cap_1, team_cap_2, team_cap_3])
 
 #-------------------------------------------------------------------------------
 
@@ -482,20 +502,22 @@ team_shirt = Product.create(
   size: 'medium'
 )
 
-team_shirt.photos.attach(
+team_shirt_1 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TEAMSHIRT_PHOTO_1.webp"),
   filename: "TEAMSHIRT_PHOTO_1.webp"
-)
+}
 
-team_shirt.photos.attach(
+team_shirt_2 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TEAMSHIRT_PHOTO_2.webp"),
   filename: "TEAMSHIRT_PHOTO_2.webp"
-)
+}
 
-team_shirt.photos.attach(
+team_shirt_3 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TEAMSHIRT_PHOTO_3.webp"),
   filename: "TEAMSHIRT_PHOTO_3.webp"
-)
+}
+
+team_shirt.photos.attach([team_shirt_1, team_shirt_2, team_shirt_3])
 
 #-------------------------------------------------------------------------------
 
@@ -510,20 +532,22 @@ t_shirt = Product.create(
   Made in Melbourne.'
 )
 
-t_shirt.photos.attach(
+t_shirt_1 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TSHIRT_PHOTO_1.webp"),
   filename: "TSHIRT_PHOTO_1.webp"
-)
+}
 
-t_shirt.photos.attach(
+t_shirt_2 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TSHIRT_PHOTO_2.webp"),
   filename: "TSHIRT_PHOTO_2.webp"
-)
+}
 
-t_shirt.photos.attach(
+t_shirt_3 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TSHIRT_PHOTO_3.webp"),
   filename: "TSHIRT_PHOTO_3.webp"
-)
+}
+
+t_shirt.photos.attach([t_shirt_1, t_shirt_2, t_shirt_3])
 
 #-------------------------------------------------------------------------------
 
@@ -539,6 +563,8 @@ u80a.photos.attach(
   filename: "U80A_SEQ2_MUTE_PHOTO_1.webp"
 )
 
+#-------------------------------------------------------------------------------
+
 xo_cap = Product.create(
   name: 'XO CAP',
   price: 42,
@@ -548,29 +574,57 @@ xo_cap = Product.create(
   And finished with the RAMA Logo debossed on the rear-adjuster.'
 )
 
-xo_cap.photos.attach(
+xo_cap_1 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/XO_CAP_PHOTO_1.webp"),
   filename: "XO_CAP_PHOTO_1.webp"
-)
+}
 
-xo_cap.photos.attach(
+xo_cap_2 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/XO_CAP_PHOTO_2.webp"),
   filename: "XO_CAP_PHOTO_2.webp"
-)
+}
 
-xo_cap.photos.attach(
+xo_cap_3 = {
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/XO_CAP_PHOTO_3.jpeg"),
   filename: "XO_CAP_PHOTO_3.jpeg"
-)
+}
+
+xo_cap.photos.attach([xo_cap_1, xo_cap_2, xo_cap_3])
 
 #-------------------------------------------------------------------------------
 
 # REVIEWS SEEDS-----------------------------------------------------------------
 
 review_1 = Review.create(
-  title: 'Awesome!',
-  body: 'Would recommend!',
+  title: "A good beginner/intermediate switch.",
+  body: "I picked these up a few weeks ago, and since using them for awhile, I 
+  like I have a good idea of how I like them. The sound profile is nice, not 
+  too clacky, which I like, but also really smooth when bottoming out. The 
+  springs are a bit too light for me, but it is still really fun to type on. 
+  The yellow and clear housing looks sleek. Build quality is decent.",
+  rating: 4,
+  product_id: 1,
+  user_id: 1
+)
+
+review_2 = Review.create(
+  title: 'Not usually a fan, but these are great!',
+  body: "I usually don't like linears that much, (Tactile gang!!) but these 
+  switches are really nice to type on. It's consistent, feels great, and the 
+  housing is really tight, so I did not have to film them to make them have 
+  a more consistent sound profile. Grab some while they are in stock!",
   rating: 5,
+  product_id: 1,
+  user_id: 1
+)
+
+review_3 = Review.create(
+  title: "Not sure if I got defects...",
+  body: "The switches came delivered with really poor packaging. Not sure if 
+  an intern was doing the packaging in the warehouse, but some of my switches 
+  were damaged on delivery and it's really disappointing, especially since I 
+  waited about 3 weeks for shipping/delivery.",
+  rating: 2,
   product_id: 1,
   user_id: 1
 )

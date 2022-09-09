@@ -2,8 +2,9 @@
     display: flex;
     justify-content: center;
     margin: 0 15%;
-    height: 100vh;
+    height: 50vh;
     padding-top: 60px;
+    margin-bottom: 10%;
 }
 
 .left-column, .right-column {

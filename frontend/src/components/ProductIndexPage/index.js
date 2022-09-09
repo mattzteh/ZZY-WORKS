@@ -19,10 +19,10 @@ const ProductIndexPage = () => {
         <div className="products">
             <ul >
                 {
-                    products.map(product => <li><ProductIndexItem
+                    products.map(product => <li key={product.id}><ProductIndexItem
                         product = {product}
-                        key = {product.id}
-                        /></li>)
+                        />
+                        </li>)
                     }
             </ul>
         </div>

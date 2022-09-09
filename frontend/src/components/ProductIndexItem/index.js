@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ProductIndexPage = ({product}) => {
     
-    const photo = product.photoUrl[2]? product.photoUrl[2] : product.photoUrl[0];
+    const photo = product.photoUrl[0];
 
     return (
     <div className='index-area'>

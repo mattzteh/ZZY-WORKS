@@ -1,7 +1,5 @@
 .review-item {
     margin: 0 15%;
-    /* border: solid #111111 2px; */
-    /* border-radius: 1em; */
     padding: 25px;
     margin-bottom: 5px;
     border-bottom: 1px solid grey;
@@ -21,11 +19,21 @@
     margin-bottom: 5px;
 }
 
-.review-header + p {
-    line-height: 1.75rem;
+.review-item p {
+    line-height: 2rem;
 }
 
 .review-header + h4 {
     color: grey;
     margin-bottom: 20px;
+}
+
+.review-buttons {
+    border: none;
+    opacity: .6;
+}
+
+.review-buttons:hover{
+    cursor: pointer;
+    opacity: 1;
 }

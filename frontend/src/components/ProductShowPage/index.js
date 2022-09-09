@@ -11,16 +11,17 @@ const ProductShowPage = () => {
     const dispatch = useDispatch();
     const product = useSelector(getProduct(productId));
     const [isOpen, setIsOpen] = useState(false);
-    // const [loading,setLoading] = useState(true)
-    // const [product, setProduct] = useState({});
-    
+
     useEffect(() => {
+        // debugger
         dispatch(fetchProduct(productId));
         
-    }, [productId]);    
+    }, []);    
     
+    
+    if (!product) return null;
+
     const photo = product.photoUrl[0];
-    // if(!product) return null;
     return (
     <>
         <div className='showpage'>

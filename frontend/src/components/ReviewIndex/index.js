@@ -12,7 +12,7 @@ const ReviewIndex = () => {
     const reviews = useSelector(getReviews)
 
     useEffect(() => {
-        dispatch(fetchProduct())
+        // dispatch(fetchProduct())
     })
 
     return (

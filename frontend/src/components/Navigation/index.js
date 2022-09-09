@@ -11,13 +11,12 @@ function Navigation() {
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
-      // <NavLink to="/"><i class="fa-regular fa-user"></i></NavLink>
       <ProfileButton user={sessionUser} />
     );
   } else {
     sessionLinks = (
       <>
-        <NavLink to="/login"><i className="fa-regular fa-user"></i></NavLink>
+        <NavLink to="/login" className='login'><i className="fa-regular fa-user"></i></NavLink>
       </>
     );
   }

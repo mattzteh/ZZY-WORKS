@@ -52,7 +52,6 @@ const ProductShowPage = () => {
             </div>  
         </div>
         <ReviewIndex/>
-        {/* <ReviewForm /> */}
     </>
     )
 }

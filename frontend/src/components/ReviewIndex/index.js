@@ -5,22 +5,33 @@ import { fetchProduct } from "../../store/products";
 import { getReviews } from "../../store/reviews";
 import ReviewIndexItem from "../ReviewIndexItem";
 import './ReviewIndex.css';
+import ReviewFormModal from "../ReviewFormModal";
 
 const ReviewIndex = () => {
     const dispatch = useDispatch();
     const productId = useParams();
     const reviews = useSelector(getReviews)
+    const sessionUser = useSelector(state => state.session.user);
 
-    useEffect(() => {
-        // dispatch(fetchProduct())
-    })
+    let modalButton;
+    if (sessionUser) {
+        modalButton = (
+        <ReviewFormModal/>
+        )
+    } else {
+        modalButton = (
+            <></>
+        )
+    }
 
     return (
     <>
         <div className="review">
             <h1>Reviews</h1>
-            <hr/>
+            {modalButton}
         </div>
+        <hr className="review-line"/>
+
         <ul>
             {
                 reviews.map(review => <ReviewIndexItem

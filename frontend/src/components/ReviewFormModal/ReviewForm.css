@@ -1,0 +1,9 @@
+.review-modal-button {
+    opacity: .6;
+    border: none;
+    margin-left: 20px;
+}
+
+.review-modal-button:hover {
+    opacity: 1;
+}

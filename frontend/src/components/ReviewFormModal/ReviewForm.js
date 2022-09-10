@@ -4,22 +4,24 @@ import { getReviews } from "../../store/reviews";
 import { getCurrentUser } from "../../store/session";
 import { useState } from "react";
 import { getProduct } from "../../store/products";
+import { Modal } from "../../context/Modal";
 
 const ReviewForm = () => {
     const { productId } = useParams();
-    // const formType = reviewId ? 'Edit Review' : 'Create Review';
+    const reviewId = useSelector(state => state.reviews)
+    const formType = reviewId ? 'Edit Review' : 'Create Review';
     const reviews = useSelector(getReviews);
     let review = useSelector(getProduct())
     let userReviews = reviews;
     const currentUserId = useSelector(getCurrentUser);
 
-    // if (formType === 'Create Review') {
-    //     review = {
-    //         title: '',
-    //         body: '',
-    //         rating: 0
-    //     }
-    // }
+    if (formType === 'Create Review') {
+        review = {
+            title: '',
+            body: '',
+            rating: 0
+        }
+    }
 
     const [title, setTitle] = useState(review.title);
     const [body, setBody] = useState(review.body);
@@ -28,7 +30,7 @@ const ReviewForm = () => {
 
     return (
        <>
-       <form></form>
+       <h1>hello</h1>
        </>
     )
 }

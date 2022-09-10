@@ -16,7 +16,7 @@ function Navigation() {
   } else {
     sessionLinks = (
       <>
-        <NavLink to="/login" className='login'><i className="fa-regular fa-user"></i></NavLink>
+        <NavLink to="/login" className='user-button'><i className="fa-regular fa-user"></i></NavLink>
       </>
     );
   }

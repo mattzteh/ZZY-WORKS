@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchProduct, getProduct } from '../../store/products';
-import ReviewForm from '../ReviewForm';
+import ReviewForm from '../ReviewFormModal/ReviewForm';
 import ReviewIndex from '../ReviewIndex';
 import './ProductShow.css'
 
@@ -13,9 +13,7 @@ const ProductShowPage = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-        // debugger
-        dispatch(fetchProduct(productId));
-        
+        dispatch(fetchProduct(productId)); 
     }, []);    
     
     

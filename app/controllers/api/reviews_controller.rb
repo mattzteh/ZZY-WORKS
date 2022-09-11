@@ -1,21 +1,31 @@
 class Api::ReviewsController < ApplicationController
 
+    wrap_parameters include: Review.attribute_names + ['user_id', 'product_id']
+
     def create
-        @review = Review.new(review_params)
+        @review = current_user.reviews.new(review_params)
 
         if @review.save
-            render :index
+            render :show
         else
             render json: { errors: ['Invalid input.'] }
         end
     end
 
-    def show
-        @review = Review.find_by(id: params[:id])
-    end
+    # def show
+    #     @review = Review.find_by(id: params[:id])
+    # end
 
     def update
-        
+        @review = current_user.reviews.find_by(id: [params[:id]])
+
+        if @review.update(review_params) && @review && current_user.id = @review.user_id
+            @review
+            render :show
+        else
+            render json: {errors: ['Invalid input.']}
+        end
+
     end
 
     def destroy
@@ -33,6 +43,6 @@ class Api::ReviewsController < ApplicationController
     private
 
     def review_params
-        params.require(:review).permit(:rating, :title, :body)
+        params.require(:review).permit(:rating, :title, :body, :user_id, :product_id)
     end
 end

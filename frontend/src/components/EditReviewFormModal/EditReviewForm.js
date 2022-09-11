@@ -4,18 +4,20 @@ import { createReview } from "../../store/reviews";
 import { useState } from "react";
 import { getCurrentUser } from "../../store/session";
 
-const ReviewForm = () => {
+const EditReviewForm = () => {
     const { productId }  = useParams();
     const currentUserId = useSelector(getCurrentUser)
+    // const reviewId = useSelector()
     
-    const [rating, setRating] = useState(0);
+    const [rating, setRating] = useState();
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(createReview({rating, title, body, product_id: productId}))
+        review = {...review, rating, title, body, productId: productId, userId: currentUserId};
+        dispatch(createReview(review))
     }
 
     const update = (field) => {
@@ -79,4 +81,4 @@ const ReviewForm = () => {
     )
 }
 
-export default ReviewForm;
+export default EditReviewForm;

@@ -18,7 +18,6 @@ export const getProducts = state => {
 }
 
 export const getProduct = productId => state => {
-    // debugger
     return state?.products ? state.products[productId] : null;
 }
 

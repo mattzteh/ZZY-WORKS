@@ -20,7 +20,7 @@ const ProductIndexPage = () => {
             <ul >
                 {
                     products.map(product => <li key={product.id}><ProductIndexItem
-                        product = {product}
+                        product={product}
                         />
                         </li>)
                     }

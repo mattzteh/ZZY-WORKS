@@ -34,11 +34,10 @@ const ReviewIndex = () => {
 
         <ul>
             {
-                reviews.map(review => <ReviewIndexItem
+                reviews.map(review => <li key={review.id}><ReviewIndexItem
                     review = {review}
-                    key = {review.id}
                     />
-                    )
+                </li>)
                 }
         </ul>
     </>

@@ -4,9 +4,9 @@ class Api::ReviewsController < ApplicationController
         @review = Review.new(review_params)
 
         if @review.save
-            render :show
+            render :index
         else
-            render json: { errors: @review.errors.full_messages } #, status: :unprocessable_entity
+            render json: { errors: ['Invalid input.'] }
         end
     end
 
@@ -27,10 +27,12 @@ class Api::ReviewsController < ApplicationController
 
     def index
         @reviews = Review.all
+        render :index
     end
 
     private
+
     def review_params
-        params.require(:reviews).permit(:rating, :title, :body)
+        params.require(:review).permit(:rating, :title, :body)
     end
 end

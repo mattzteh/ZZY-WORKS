@@ -8,22 +8,22 @@ const ReviewForm = () => {
     const { productId }  = useParams();
     const currentUserId = useSelector(getCurrentUser)
     let review = {
-        rating: 0,
+        rating: '',
         title: '',
         body: '',
-        userId: currentUserId,
-        productId: productId
+        productId: productId,
+        userId: currentUserId
     }
     
-    const [rating, setRating] = useState(review.rating);
-    const [title, setTitle] = useState(review.title);
-    const [body, setBody] = useState(review.body);
+    const [rating, setRating] = useState(0);
+    const [title, setTitle] = useState('');
+    const [body, setBody] = useState('');
     const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        review = {...review, rating, title, body};
-        dispatch(createReview(productId, review))
+        review = {...review, rating, title, body, productId: productId, userId: currentUserId};
+        dispatch(createReview(review))
     }
 
     const update = (field) => {
@@ -47,6 +47,8 @@ const ReviewForm = () => {
 
     return (
     <>
+    <div className="review-form-container">
+
         <form className="review-form" onSubmit={handleSubmit}>
             <h2>Write a Review</h2>
             <label>Title
@@ -68,17 +70,20 @@ const ReviewForm = () => {
             </label>
 
             <label>Rating
+                <br/>
                 <input
-                type='text'
+                type='number'
+                step="1"
                 value={rating}
                 onChange={update('rating')}
                 />
             </label>
 
-            <input type="submit"/>
+            <input className="review-button" type="submit" value='Submit Review'/>
 
        </form>
-       </>
+    </div>
+    </>
     )
 }
 

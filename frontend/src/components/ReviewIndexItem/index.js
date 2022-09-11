@@ -27,7 +27,6 @@ const ReviewIndexItem = ({review}) => {
 
     return (
         <div className='review-item'>
-            <li>
                 <div className='review-header'>
                     <h2>{review.title}</h2>
 
@@ -37,7 +36,6 @@ const ReviewIndexItem = ({review}) => {
                 </div>
                 <h4>{review.firstName} {review.lastName}</h4>
                 <p>{review.body}</p>
-            </li>
         </div>
     )
 }

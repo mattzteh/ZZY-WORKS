@@ -36,7 +36,7 @@ const ReviewIndexItem = ({review}) => {
                     </div>
                 </div>
                 <h4>{review.firstName} {review.lastName}</h4>
-                <h6>{review.rating}</h6>
+                <h6>{review.rating}/5</h6>
                 <p>{review.body}</p>
         </div>
     )

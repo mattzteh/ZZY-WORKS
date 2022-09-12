@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateReview } from "../../store/reviews";
 import { useState } from "react";
 
-const EditReviewForm = ({review}) => {
+const EditReviewForm = ({review, showModal}) => {
 
     const [rating, setRating] = useState(review.rating);
     const [title, setTitle] = useState(review.title);
@@ -10,14 +10,21 @@ const EditReviewForm = ({review}) => {
     const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
+        const newReview = {
+            rating: rating,
+            title: title,
+            body: body,
+            id: review.id
+        }
         e.preventDefault();
-        dispatch(updateReview(review))
+        dispatch(updateReview(newReview)).then(()=>showModal(false))
     }
 
     const update = (field) => {
         return e => {
             switch (field) {
                 case 'rating':
+                    
                     setRating(e.currentTarget.value);
                     break;
                 case 'title':
@@ -74,7 +81,6 @@ const EditReviewForm = ({review}) => {
             className="review-button" 
             type="submit" 
             value='Submit Review'
-            // onClick={() => window.location.reload()}
             />
 
        </form>

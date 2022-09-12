@@ -7,7 +7,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #modal-background {
@@ -23,5 +22,6 @@
 
 #modal-content {
     position: absolute;
-    width: 30%;
+    width: 50%;
+    align-content: center;
 }

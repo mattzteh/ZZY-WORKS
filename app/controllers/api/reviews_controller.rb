@@ -18,6 +18,7 @@ class Api::ReviewsController < ApplicationController
 
     def update
         @review = current_user.reviews.find_by(id: [params[:id]])
+       
 
         if @review.update(review_params) && @review && current_user.id = @review.user_id
             @review

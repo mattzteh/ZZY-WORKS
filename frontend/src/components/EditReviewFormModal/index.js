@@ -14,7 +14,7 @@ function EditReviewFormModal({review}) {
       <button className="review-modal-button" onClick={() => setShowModal(true)}><i className="fa-solid fa-pen"></i></button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          <EditReviewForm review={review}/>
+          <EditReviewForm review={review} showModal={setShowModal}/>
         </Modal>
       )}
     </>

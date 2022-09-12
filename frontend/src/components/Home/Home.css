@@ -17,6 +17,10 @@
     box-sizing: border-box;
 }
 
+button {
+    border-radius: 2px;
+}
+
 .splashpage img {
     width: 100vw;
     animation: zoominoutsinglefeatured 6s;

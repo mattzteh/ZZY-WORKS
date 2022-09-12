@@ -1,10 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { createReview } from "../../store/reviews";
 import { useState } from "react";
-import { getCurrentUser } from "../../store/session";
 
-const ReviewForm = () => {
+const ReviewForm = ({showModal}) => {
     const dispatch = useDispatch();
     const { productId }  = useParams();
 
@@ -14,7 +13,8 @@ const ReviewForm = () => {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(createReview({rating, title, body, product_id: productId}))
+        dispatch(createReview({rating, title, body, product_id: productId}));
+        showModal(false);
     }
 
     const update = (field) => {
@@ -47,7 +47,7 @@ const ReviewForm = () => {
                 <input
                 type='text'
                 value={title}
-                placeholder=''
+                placeholder='Title your review here...'
                 onChange={update('title')}
                 />
             </label>
@@ -58,7 +58,7 @@ const ReviewForm = () => {
                 className="review-input"
                 type='text'
                 value={body}
-                placeholder='Write your Review here.'
+                placeholder='Write your review here...'
                 onChange={update('body')}
                 />
             </label>
@@ -79,7 +79,6 @@ const ReviewForm = () => {
             className="review-button" 
             type="submit" 
             value='Submit Review'
-            onClick={() => window.location.reload()}
             />
 
        </form>

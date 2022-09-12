@@ -48,7 +48,7 @@ export const deleteReview = (reviewId) => async dispatch => {
     })
 
     if (response.ok) {
-        dispatch(removeReview(reviewId))
+        dispatch(removeReview(reviewId));
     }
 }
 

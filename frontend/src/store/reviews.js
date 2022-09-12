@@ -14,6 +14,8 @@ const removeReview = reviewId => ({
     reviewId
 })
 
+//------------------------------------------------------------------------------
+
 export const getReviews = state => {
     return state?.reviews ? Object.values(state.reviews) : [];
 }
@@ -53,6 +55,7 @@ export const deleteReview = (reviewId) => async dispatch => {
     }
 }
 
+//------------------------------------------------------------------------------
 
 const reviewsReducer = (state = {}, action) => {
     switch (action.type) {

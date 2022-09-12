@@ -13,6 +13,8 @@ const receiveProduct = payload => ({
     payload
 })
 
+//------------------------------------------------------------------------------
+
 export const getProducts = state => {
     return state?.products ? Object.values(state.products) : [];
 }
@@ -20,6 +22,8 @@ export const getProducts = state => {
 export const getProduct = productId => state => {
     return state?.products ? state.products[productId] : null;
 }
+
+//------------------------------------------------------------------------------
 
 export const fetchProducts = () => async dispatch => {
     const response = await csrfFetch('/api/products')
@@ -38,9 +42,10 @@ export const fetchProduct = (productId) => async dispatch => {
     if (response.ok) {
         const data = await response.json();
        dispatch(receiveProduct(data));
-        // data;
     }
 }
+
+//------------------------------------------------------------------------------
 
 const productsReducer = (state = {}, action) => {
     Object.freeze(state);

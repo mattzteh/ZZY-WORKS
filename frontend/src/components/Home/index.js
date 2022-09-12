@@ -9,12 +9,12 @@ const home = () => {
 
         <div className="m60">
             <button>BUY</button>
-            <img src={m60Splash}></img>
+            <img src={u80Splash}></img>
         </div>
 
         <div className="u80">
             <button>View</button>
-            <img src={u80Splash}></img>
+            <img src={m60Splash}></img>
         </div>
     </div>
     </>

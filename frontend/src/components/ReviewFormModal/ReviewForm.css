@@ -3,6 +3,7 @@
     opacity: .6;
     border: none;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .review-modal-button:hover {

@@ -24,6 +24,8 @@ class User < ApplicationRecord
     validates :password, length: { in: 6..255 }, allow_nil: true
     before_validation :ensure_session_token
     
+#-------------------------------------------------------------------------------
+
     def self.find_by_credentials(credential, password)
         if credential =~ URI::MailTo::EMAIL_REGEXP 
             field = :email
@@ -52,6 +54,13 @@ class User < ApplicationRecord
         self.session_token ||= generate_unique_session_token
     end
 
+#-------------------------------------------------------------------------------
+
     has_many :reviews,
         dependent: :destroy
+
+    has_many :cart_items,
+        dependnet: :destroy
+
+
 end

@@ -60,7 +60,7 @@ class User < ApplicationRecord
         dependent: :destroy
 
     has_many :cart_items,
-        dependnet: :destroy
+        dependent: :destroy
 
 
 end

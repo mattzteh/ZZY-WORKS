@@ -12,6 +12,7 @@
 class CartItem < ApplicationRecord
     validates :user_id, :product_id, :quantity, presence: true
 
+    has_many_attached :photos
 
     belongs_to :user
     belongs_to :product

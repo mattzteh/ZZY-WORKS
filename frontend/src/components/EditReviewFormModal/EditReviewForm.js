@@ -1,23 +1,19 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { createReview } from "../../store/reviews";
+import { updateReview } from "../../store/reviews";
 import { useState } from "react";
 import { getCurrentUser } from "../../store/session";
 
-const EditReviewForm = () => {
-    const { productId }  = useParams();
-    const currentUserId = useSelector(getCurrentUser)
-    // const reviewId = useSelector()
+const EditReviewForm = (review) => {
     
-    const [rating, setRating] = useState();
-    const [title, setTitle] = useState('');
-    const [body, setBody] = useState('');
+    const [rating, setRating] = useState(review.rating);
+    const [title, setTitle] = useState(review.title);
+    const [body, setBody] = useState(review.body);
     const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        review = {...review, rating, title, body, productId: productId, userId: currentUserId};
-        dispatch(createReview(review))
+        dispatch(updateReview(review.rating, review.title, review.body))
     }
 
     const update = (field) => {
@@ -44,12 +40,12 @@ const EditReviewForm = () => {
     <div className="review-form-container">
 
         <form className="review-form" onSubmit={handleSubmit}>
-            <h2>Write a Review</h2>
+            <h2>Edit Your Review</h2>
             <label>Title
                 <br/>
                 <input
                 type='text'
-                value={title}
+                value={review.title}
                 onChange={update('title')}
                 />
             </label>
@@ -58,7 +54,7 @@ const EditReviewForm = () => {
                 <br/>
                 <input
                 type='text'
-                value={body}
+                value={review.body}
                 onChange={update('body')}
                 />
             </label>
@@ -68,7 +64,7 @@ const EditReviewForm = () => {
                 <input
                 type='number'
                 step="1"
-                value={rating}
+                value={review.rating}
                 onChange={update('rating')}
                 />
             </label>

@@ -3,15 +3,14 @@ import { Link } from 'react-router-dom';
 import { Modal } from '../../context/Modal';
 import { useSelector } from 'react-redux';
 import EditReviewForm from './EditReviewForm';
-import './ReviewForm.css'
 
-function ReviewFormModal() {
+function EditReviewFormModal() {
   const [showModal, setShowModal] = useState(false);
   const sessionUser = useSelector(state => state.session.user);
 
   return (
     <>
-      <button className="review-modal-button" onClick={() => setShowModal(true)}><i className="fa-solid fa-plus"></i></button>
+      <button className="review-modal-button" onClick={() => setShowModal(true)}><i className="fa-solid fa-pen"></i></button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <EditReviewForm />
@@ -21,4 +20,4 @@ function ReviewFormModal() {
   );
 }
 
-export default ReviewFormModal;
+export default EditReviewFormModal;

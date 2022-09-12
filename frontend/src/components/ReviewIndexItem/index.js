@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteReview } from '../../store/reviews';
 import { getCurrentUser } from '../../store/session';
+import EditReviewFormModal from '../EditReviewFormModal';
 import './ReviewIndexItem.css'
 
 const ReviewIndexItem = ({review}) => {
@@ -12,7 +13,7 @@ const ReviewIndexItem = ({review}) => {
     if (review.userId == currentUserId) {
         reviewButtons = (
         <>
-            <button className='review-buttons'><i className="fa-solid fa-pen"></i></button>
+            <EditReviewFormModal><button className='review-buttons'></button></EditReviewFormModal>
                 <button className='review-buttons' onClick={() => dispatch(deleteReview(review.id))}>
                     <i className="fa-solid fa-trash"></i>
                 </button>

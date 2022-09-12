@@ -5,14 +5,13 @@ import { useState } from "react";
 import { getCurrentUser } from "../../store/session";
 
 const ReviewForm = () => {
+    const dispatch = useDispatch();
     const { productId }  = useParams();
-    const currentUserId = useSelector(getCurrentUser)
-    
+
     const [rating, setRating] = useState(0);
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    const dispatch = useDispatch();
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(createReview({rating, title, body, product_id: productId}))
@@ -71,7 +70,12 @@ const ReviewForm = () => {
                 />
             </label>
 
-            <input className="review-button" type="submit" value='Submit Review'/>
+            <input 
+            className="review-button" 
+            type="submit" 
+            value='Submit Review'
+            onClick={() => window.location.reload()}
+            />
 
        </form>
     </div>

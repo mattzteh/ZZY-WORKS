@@ -4,7 +4,8 @@ import { Modal } from '../../context/Modal';
 import { useSelector } from 'react-redux';
 import EditReviewForm from './EditReviewForm';
 
-function EditReviewFormModal() {
+function EditReviewFormModal({review}) {
+
   const [showModal, setShowModal] = useState(false);
   const sessionUser = useSelector(state => state.session.user);
 
@@ -13,7 +14,7 @@ function EditReviewFormModal() {
       <button className="review-modal-button" onClick={() => setShowModal(true)}><i className="fa-solid fa-pen"></i></button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          <EditReviewForm />
+          <EditReviewForm review={review}/>
         </Modal>
       )}
     </>

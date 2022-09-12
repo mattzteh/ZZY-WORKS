@@ -18,7 +18,7 @@ export const getReviews = state => {
     return state?.reviews ? Object.values(state.reviews) : [];
 }
 
-export const createReview = review => async dispatch => {
+export const createReview = (review) => async dispatch => {
     const response = await csrfFetch('/api/reviews', {
         method: 'POST',
         body: JSON.stringify(review)

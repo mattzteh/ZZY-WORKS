@@ -1,11 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
 import { updateReview } from "../../store/reviews";
 import { useState } from "react";
-import { getCurrentUser } from "../../store/session";
 
-const EditReviewForm = (review) => {
-    
+const EditReviewForm = ({review}) => {
+
     const [rating, setRating] = useState(review.rating);
     const [title, setTitle] = useState(review.title);
     const [body, setBody] = useState(review.body);
@@ -13,7 +11,7 @@ const EditReviewForm = (review) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(updateReview(review.rating, review.title, review.body))
+        dispatch(updateReview(review))
     }
 
     const update = (field) => {
@@ -36,7 +34,7 @@ const EditReviewForm = (review) => {
     }
 
     return (
-    <>
+    <> 
     <div className="review-form-container">
 
         <form className="review-form" onSubmit={handleSubmit}>
@@ -45,16 +43,17 @@ const EditReviewForm = (review) => {
                 <br/>
                 <input
                 type='text'
-                value={review.title}
+                value={title}
                 onChange={update('title')}
                 />
             </label>
 
             <label>Review
                 <br/>
-                <input
+                <textarea
+                className="review-input"
                 type='text'
-                value={review.body}
+                value={body}
                 onChange={update('body')}
                 />
             </label>
@@ -64,12 +63,19 @@ const EditReviewForm = (review) => {
                 <input
                 type='number'
                 step="1"
-                value={review.rating}
+                min="1"
+                max="5"
+                value={rating}
                 onChange={update('rating')}
                 />
             </label>
 
-            <input className="review-button" type="submit" value='Submit Review'/>
+            <input 
+            className="review-button" 
+            type="submit" 
+            value='Submit Review'
+            // onClick={() => window.location.reload()}
+            />
 
        </form>
     </div>

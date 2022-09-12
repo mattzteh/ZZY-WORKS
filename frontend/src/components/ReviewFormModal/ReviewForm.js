@@ -8,7 +8,7 @@ const ReviewForm = () => {
     const dispatch = useDispatch();
     const { productId }  = useParams();
 
-    const [rating, setRating] = useState(0);
+    const [rating, setRating] = useState(1);
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     
@@ -47,15 +47,18 @@ const ReviewForm = () => {
                 <input
                 type='text'
                 value={title}
+                placeholder=''
                 onChange={update('title')}
                 />
             </label>
 
             <label>Review
                 <br/>
-                <input
+                <textarea
+                className="review-input"
                 type='text'
                 value={body}
+                placeholder='Write your Review here.'
                 onChange={update('body')}
                 />
             </label>
@@ -65,6 +68,8 @@ const ReviewForm = () => {
                 <input
                 type='number'
                 step="1"
+                min='1'
+                max='5'
                 value={rating}
                 onChange={update('rating')}
                 />

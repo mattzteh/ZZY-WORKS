@@ -38,7 +38,7 @@ const ProductShowPage = () => {
             <div className='right-column'>
                 <div className='product-info'>
                     <h1>{product.name}</h1>
-                    <h2>${product.price}</h2>
+                    <h2>${product.price}.00</h2>
                     <p>Tax included. Shipping calculated at checkout.</p>
                     <hr/>
                     <div className='product-buttons'>

@@ -1,10 +1,31 @@
+import { useDispatch } from 'react-redux';
+import { createCartItem, deleteCartItem } from '../../store/cart';
 import './CartIndexItem.css'
 
 const CartIndexItem = ({cartItem}) => {
+    const dispatch = useDispatch();
+    const photo = cartItem.photoUrl[0];
+
 
     return (
         <>
-        <h1>{cartItem.productId.name}</h1>
+        <div className='cart-index-item'>
+            <div className='cart-photo'>
+                <img src={photo}/>
+            </div>
+
+            <h1 className='cart-index-item-name'>{cartItem.name}</h1>
+
+            <div className='quantity-and-price'>
+                <div className='cart-buttons'>
+                    <button onClick={() => dispatch(deleteCartItem(cartItem.id))}>-</button>
+                    <h4>{cartItem.quantity}</h4>
+                    <button onClick={() => dispatch(createCartItem(cartItem))}>+</button>
+                </div>
+                <h6>${cartItem.price}.00</h6>
+            </div>
+
+        </div>
         </>
     )
 }

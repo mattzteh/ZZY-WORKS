@@ -46,7 +46,7 @@ function Navigation() {
               <button className="cart" onClick={() => setCartMenu(true)}>
                 <i className="fa-solid fa-cart-shopping"></i>
               </button>
-              {cartMenu && <div className='cart-page'><CartIndexPage closeCartMenu={setCartMenu}/></div>}
+              {cartMenu && <CartIndexPage closeCartMenu={setCartMenu}/>}
             </div>
 
           </div>

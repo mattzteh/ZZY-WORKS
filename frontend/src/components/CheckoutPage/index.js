@@ -10,25 +10,29 @@ const CheckoutPage = () => {
 
                 <form className="checkout-form">
 
-                    <label>Contact Information
+                    <h1>Contact Information</h1>
+
                         <br/>
                         <input
                         className="email"
                         type='text'
                         placeholder="Email"
                         />
-                    </label>
 
-                    <label>
-                        <input
-                        type='checkbox'
-                        />
-                    Email me with news and offers
-                    </label>
+                        <label className="email-button">
+                            <input
+                            type='checkbox'
+                            />
+                            Email me with news and offers
+                        </label>
 
                     <br/>
-                    <label>Shipping Address
+
+
+                    <h1>Shipping Address</h1>
+
                     <br/>
+
                         <select className="country-option">
                             <option>United States of America</option>
                             <option>Canada</option>
@@ -66,36 +70,38 @@ const CheckoutPage = () => {
                     placeholder="Apartment, suite, etc. (optional)"
                     />
 
-                    <input
-                    className="checkout-city"
-                    type='text'
-                    placeholder="City"
-                    />
+                    <div className="checkout-locations">
+                        <input
+                        className="checkout-city"
+                        type='text'
+                        placeholder="City"
+                        />
+
+                        <input
+                        className="checkout-state"
+                        type='text'
+                        placeholder="State"
+                        />
+
+                        <input
+                        className="checkout-zip"
+                        type='text'
+                        placeholder="Zip Code"
+                        />
+                    </div>
 
                     <input
-                    className="checkout-state"
-                    type='text'
-                    placeholder="State"
-                    />
-
-                    <input
-                    className="checkout-zip"
-                    type='text'
-                    placeholder="Zip Code"
-                    />
-
-                    <input
+                    className="phone"
                     type='text'
                     placeholder="Phone"
                     />
 
-                    </label>
-
                     <label>
                     <input
+                    className="save-info-button"
                     type='checkbox'
-                    />
-                    Save this information for next time</label>
+                    /> Save this information for next time
+                    </label>
 
                 </form>
 

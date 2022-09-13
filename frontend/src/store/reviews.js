@@ -60,7 +60,7 @@ export const deleteReview = (reviewId) => async dispatch => {
 const reviewsReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_PRODUCT:
-            return { ...state, ...action.payload.reviews }
+            return { ...action.payload.reviews }
         case RECEIVE_REVIEW:
             return { ...state, [action.review.id] : action.review }
         case REMOVE_REVIEW:

@@ -31,6 +31,7 @@ const ProductShowPage = () => {
             history.push('/login')
         } else {
             dispatch(createCartItem(cartItem))
+            
         }
     }
     
@@ -55,7 +56,8 @@ const ProductShowPage = () => {
 
 
                         <button onClick={handleSubmit}
-                        className='cart-button'>Add to cart</button>
+                        className='cart-button'>Add to cart
+                        </button>
 
 
 
@@ -74,7 +76,9 @@ const ProductShowPage = () => {
                 </div>
             </div>  
         </div>
+        <div className='review-div'>  
         <ReviewIndex />
+        </div>
     </>
     )
 }

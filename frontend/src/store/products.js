@@ -8,10 +8,11 @@ const receiveProducts = products => ({
     products
 })
 
-const receiveProduct = payload => ({
-    type: RECEIVE_PRODUCT,
-    payload
-})
+const receiveProduct = payload => {
+    // debugger
+   return { type: RECEIVE_PRODUCT,
+    payload}
+}
 
 //------------------------------------------------------------------------------
 
@@ -36,7 +37,7 @@ export const fetchProducts = () => async dispatch => {
 }
 
 export const fetchProduct = (productId) => async dispatch => {
-    
+    // debugger
     const response = await csrfFetch(`/api/products/${productId}`)
 
     if (response.ok) {

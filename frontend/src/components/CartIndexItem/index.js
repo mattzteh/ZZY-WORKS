@@ -28,9 +28,15 @@ const CartIndexItem = ({cartItem}) => {
 
             <div className='quantity-and-price'>
                 <div className='cart-buttons'>
-                    <button onClick={handleDecrement}>-</button>
+                    <button onClick={handleDecrement}>
+                        <i className="fa-solid fa-minus"></i>
+                    </button>
+
                     <h4>{cartItem.quantity}</h4>
-                    <button onClick={() => dispatch(updateCartItem(cartItem, "increment"))}>+</button>
+                    <button onClick={() => dispatch(updateCartItem(cartItem, "increment"))}>
+                        <i className="fa-solid fa-plus"></i>
+                    </button>
+                    
                 </div>
                 <h6>${cartItem.price}.00</h6>
             </div>

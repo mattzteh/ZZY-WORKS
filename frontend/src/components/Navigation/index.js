@@ -3,12 +3,23 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import CartIndexPage from '../CartIndexPage';
+import { useLocation } from 'react-router-dom';
 import './Navigation.css';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
+  const location = useLocation();
+  console.log(location)
 
   const [cartMenu, setCartMenu] = useState(false);
+
+  const navToggle = () => {
+    if (location.pathname === '/checkout') {
+      return 'hide'
+    } else {
+      return 'navigation'
+    }
+  }
 
   let sessionLinks;
   if (sessionUser) {
@@ -25,7 +36,7 @@ function Navigation() {
 
   return (
   <>
-  <div className="navigation">
+  <div className={navToggle()}>
     <ul>
       <li className='navitems'>
         <div className='nav-name'>

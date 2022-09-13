@@ -4,8 +4,8 @@ json.product do
         json.photo_url @product.photos.map { |product| product.url}
     end
 end
-
 json.reviews do
+    # debugger
     @product.reviews.each do |review|
         json.set! review.id do 
             json.extract! review, :id, :title, :body, :rating, :user_id, :product_id

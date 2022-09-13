@@ -11,6 +11,23 @@ const CartIndexPage = ({closeCartMenu}) => {
     const cartItems = useSelector(getCartItems);
     const currentUserId = useSelector(getCurrentUser);
 
+    let cartMessage;
+    if (cartItems.length == 0) {
+        cartMessage = (
+            <p className='cart-message'>Your cart is currently empty.</p>
+        )
+    } else {
+        cartMessage = (
+            <Link to='/checkout' style={{ textDecoration: 'none' }}>
+            <div className='checkout-wrapper'>
+                <button className='checkout' 
+                onClick={() => closeCartMenu(false)}
+                >Check out</button>
+            </div>
+            </Link>
+        )
+    }
+
 
     useEffect(() => {
         dispatch(fetchCartItems());
@@ -40,16 +57,7 @@ const CartIndexPage = ({closeCartMenu}) => {
                     </li>)
                 }
             </ul>
-            <hr/>
-
-            <Link to='/checkout' style={{ textDecoration: 'none' }}>
-            <div className='checkout-wrapper'>
-                <button className='checkout' 
-                onClick={() => closeCartMenu(false)}
-                >Check out</button>
-            </div>
-            </Link>
-
+            {cartMessage}
         </div>
         </>
     )

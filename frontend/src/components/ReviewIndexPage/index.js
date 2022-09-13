@@ -13,6 +13,10 @@ const ReviewIndex = () => {
     const reviews = useSelector(getReviews)
     const sessionUser = useSelector(state => state.session.user);
 
+    // useEffect(() => {
+    //     // dispatch(getReviews)
+    // },[productId])
+
     let modalButton;
     if (sessionUser) {
         modalButton = (

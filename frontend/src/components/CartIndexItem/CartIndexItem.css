@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 25% 75%;
     grid-template-rows: 50% 50%;
-    margin: 15px 25px;
+    margin: 15px 10%;
     font-size: 17px;
 }
 
@@ -14,7 +14,11 @@
 .cart-index-item img {
     width: 100%;
     height: auto;
-    margin: 10% 0;
+}
+
+.cart-index-item-name {
+    display: flex;
+    align-items: flex-end;
 }
 
 .quantity-and-price {
@@ -28,6 +32,7 @@
 .cart-buttons {
     border: solid gray 1px;
     display: flex;
+    justify-content: space-between;
 }
 
 .cart-index-item button {
@@ -47,6 +52,10 @@
     display: flex;
     align-items: center;
     padding: 10px 10px;
+}
+
+.cart-buttons i {
+    background-color: transparent;
 }
 
 .cart-index-item h6 {

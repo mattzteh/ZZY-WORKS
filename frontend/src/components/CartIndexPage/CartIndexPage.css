@@ -12,7 +12,7 @@
 }
 
 .cart-page-header {
-    margin: 40px 40px;
+    margin: 40px 10%;
     display: flex;
     justify-content: space-between;
 }
@@ -61,7 +61,13 @@
     -webkit-transition: background-color 200ms linear;
     -ms-transition: background-color 200ms linear;
     transition: background-color 200ms linear;
+}
 
+.cart-message {
+    font-size: 18px;
+    color: grey;
+    margin-top: 50px;
+    margin-left: 10%;
 }
 
 

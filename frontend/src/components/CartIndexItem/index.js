@@ -7,6 +7,15 @@ const CartIndexItem = ({cartItem}) => {
     const dispatch = useDispatch();
     const photo = cartItem.photoUrl[0];
 
+    const handleDecrement = (e) => {
+        e.preventDefault();
+        if (cartItem.quantity <= 1) {
+            dispatch(deleteCartItem(cartItem.id))
+        } else {
+            dispatch(updateCartItem(cartItem, "decrement"))
+        }
+    } 
+
 
     return (
         <>
@@ -19,7 +28,7 @@ const CartIndexItem = ({cartItem}) => {
 
             <div className='quantity-and-price'>
                 <div className='cart-buttons'>
-                    <button onClick={() => dispatch(updateCartItem(cartItem, "decrement"))}>-</button>
+                    <button onClick={handleDecrement}>-</button>
                     <h4>{cartItem.quantity}</h4>
                     <button onClick={() => dispatch(updateCartItem(cartItem, "increment"))}>+</button>
                 </div>

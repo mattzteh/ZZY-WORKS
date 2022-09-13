@@ -7,31 +7,43 @@ import Home from "./components/Home";
 import UserShowPage from "./components/UserShowPage";
 import ProductIndexPage from "./components/ProductIndexPage";
 import ProductShowPage from "./components/ProductShowPage";
+import CheckoutPage from "./components/CheckoutPage";
 
 function App() {
 
   return (
   <>
-  <Navigation/>
+  <Navigation />
     <Switch>
+
       <Route path="/login">
         <LoginFormPage />
       </Route>
+
       <Route path="/signup">
         <SignupFormPage />
       </Route>
+
       <Route path="/catalog">
         <ProductIndexPage />
       </Route>
+
+      <Route path="/checkout">
+        <CheckoutPage />
+      </Route>
+
       <Route path="/products/:productId">
         <ProductShowPage />
       </Route>
+
       <Route path="/users/:id">
         <UserShowPage />
       </Route>
+
       <Route exact path="/">
         <Home />
       </Route>
+
     </Switch>
   </>
   );

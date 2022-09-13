@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { createCartItem, deleteCartItem } from '../../store/cart';
+import { createCartItem, updateCartItem, deleteCartItem } from '../../store/cart';
 import './CartIndexItem.css'
 
 const CartIndexItem = ({cartItem}) => {
@@ -11,7 +12,7 @@ const CartIndexItem = ({cartItem}) => {
         <>
         <div className='cart-index-item'>
             <div className='cart-photo'>
-                <img src={photo}/>
+                <Link to={`/products/${cartItem.productId}`}><img src={photo}/></Link>
             </div>
 
             <h1 className='cart-index-item-name'>{cartItem.name}</h1>

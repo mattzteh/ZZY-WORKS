@@ -22,7 +22,7 @@
 }
 
 .cart-page-header button {
-    font-size: 20px;
+    font-size: 15px;
     border-style: none;
     opacity: .6;
 }
@@ -37,9 +37,12 @@
 
 .checkout-wrapper {
     margin-top: 20px;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
+
+
 
 .checkout {
     cursor: pointer;
@@ -54,7 +57,7 @@
 .checkout:hover {
     background-color: #ffc80f;
     color: black;
-    border-color: black;
+    border: solid black 1px;
     -webkit-transition: background-color 200ms linear;
     -ms-transition: background-color 200ms linear;
     transition: background-color 200ms linear;

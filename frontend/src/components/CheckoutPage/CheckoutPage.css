@@ -1,0 +1,45 @@
+.checkout-page {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.checkout-left-column {
+    grid-column: 1;
+    margin: 0 20%;
+}
+
+.checkout-right-column {
+    grid-column: 2;
+}
+
+.checkout-form input {
+    height: 2.25em;
+    border: solid grey 1px;
+    border-radius: 3px;
+    outline: none;
+    margin: 5px 0px;
+}
+
+.country-option {
+    width: 100%;
+    height: 2.25em;
+}
+
+
+.checkout-names {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-first-name {
+    width: 49%;
+}
+
+.checkout-last-name {
+    width: 49%;
+}
+
+.email, .checkout-company, .checkout-address, .checkout-apartment {
+    width: 100%;
+}
+

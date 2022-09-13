@@ -14,6 +14,7 @@
 .cart-index-item img {
     width: 100%;
     height: auto;
+    margin: 10% 0;
 }
 
 .quantity-and-price {
@@ -27,7 +28,6 @@
 .cart-buttons {
     border: solid gray 1px;
     display: flex;
-    /* padding: 10px 10px; */
 }
 
 .cart-index-item button {
@@ -39,7 +39,8 @@
 
 .cart-index-item button:hover {
     opacity: 1;
-    background-color: lightgray;
+    background-color: rgb(139, 139, 139);
+    color: white;
 }
 
 .cart-buttons h4 {

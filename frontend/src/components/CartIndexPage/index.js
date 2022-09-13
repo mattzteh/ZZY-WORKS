@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchCartItems, getCartItems } from '../../store/cart'
+import { deleteCartItem, fetchCartItems, getCartItems } from '../../store/cart'
 import { getCurrentUser } from '../../store/session';
 import CartIndexItem from '../CartIndexItem';
 import './CartIndexPage.css'
@@ -41,9 +42,14 @@ const CartIndexPage = ({closeCartMenu}) => {
             </ul>
             <hr/>
 
+            <Link to='/checkout' style={{ textDecoration: 'none' }}>
             <div className='checkout-wrapper'>
-                <button className='checkout'>Check out</button>
+                <button className='checkout' 
+                onClick={() => closeCartMenu(false)}
+                >Check out</button>
             </div>
+            </Link>
+
         </div>
         </>
     )

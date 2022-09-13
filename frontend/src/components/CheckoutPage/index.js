@@ -1,23 +1,27 @@
+import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
+import { getCartItems } from "../../store/cart"
 import './CheckoutPage.css'
 const CheckoutPage = () => {
+
+    const currentUser = useSelector(state => state.session.user)
+
     return (
         <>
         <div className="checkout-page">
 
             <div className="checkout-left-column">
-                {/* <h1>ZZY WORKS</h1> */}
+                <h1>ZZY WORKS</h1>
 
                 <form className="checkout-form">
 
                     <h1>Contact Information</h1>
 
-                        <br/>
-                        <input
-                        className="email"
-                        type='text'
-                        placeholder="Email"
-                        />
+                        <h1 className="contact-info">
+                        {currentUser.firstName}
+                        {` ${currentUser.lastName} `}
+                        ({currentUser.email})
+                        </h1>
 
                         <label className="email-button">
                             <input
@@ -96,20 +100,24 @@ const CheckoutPage = () => {
                     placeholder="Phone"
                     />
 
-                    <label>
-                    <input
-                    className="save-info-button"
-                    type='checkbox'
-                    /> Save this information for next time
-                    </label>
+                        <label className="save-info">
+                        <input
+                        // className="save-info-button"
+                        type='checkbox'
+                        />
+                        Save info for next time
+                        </label>
 
                 </form>
 
-               <Link to="/catalog"><button>Keep Shopping</button></Link> 
+               <Link to="/catalog">
+                <button className="catalog-return">
+                <i className="fa-solid fa-arrow-left"></i>
+                Keep Shopping</button>
+                </Link> 
             </div>
 
             <div className="checkout-right-column">
-
             </div>
 
         </div>

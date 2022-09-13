@@ -1,19 +1,24 @@
 .checkout-page {
     display: grid;
     grid-template-columns: 57% 43%;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .checkout-page h1 {
     margin: 15px 0px;
-    background-color: white;
+    background-color: whitesmoke;
+}
+
+.contact-info {
+    color: grey;
+    font-size: 14px;
 }
 
 .checkout-left-column {
     grid-column: 1;
     margin-left: 20%;
-    border-right: solid grey 1px;
-    background-color: white;
+    border-right: solid lightgrey 1px;
+    background-color: whitesmoke;
 }
 
 .checkout-right-column {
@@ -24,7 +29,7 @@
 .checkout-form {
     margin-top: 10%;
     margin-right: 10%;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .email-button, .save-info-button {
@@ -35,15 +40,15 @@
 
 .checkout-form input {
     height: 3em;
-    border: solid grey 1px;
+    border: solid lightgrey 1px;
     border-radius: 2px;
     outline: none;
     margin: 5px 0px;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .checkout-form label, .checkout-form select {
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .country-option {
@@ -56,7 +61,7 @@
 .checkout-names {
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .checkout-first-name {
@@ -71,13 +76,36 @@
     width: 100%;
 }
 
+.save-info {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
 
 .checkout-locations {
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: whitesmoke;
 }
+
 .checkout-city, .checkout-state, .checkout-zip {
     width: 32.5%;
 }
 
+.catalog-return {
+    margin: 50px 0;
+    padding: 5px 5px;
+    background-color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    color: grey;
+}
+
+.catalog-return:hover {
+    color: black;
+}
+
+.catalog-return i {
+    background-color: whitesmoke;
+    margin-right: 5px;
+}

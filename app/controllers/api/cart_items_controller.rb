@@ -1,23 +1,33 @@
-class Api::CartItems_Controller < ApplicationController
+class Api::CartItemsController < ApplicationController
 
     def index
-        @cart_items = CartItems.all
+        @cart_items = current_user.cart_items
+        render :index
     end
 
     def create
-        @cart_item = current_user.cart_items.new(cart_item_params)
+        current_user.cart_items.each do |cart_item|
+            if cart_item.product_id == (params[:cart_item][:product_id]).to_i
+                cart_item.quantity += 1
+                cart_item.save!
+                @cart_item = cart_item
+                render :show
+                return
+            end
+        end 
+        @cart_item = CartItem.create(cart_item_params)
 
         if @cart_item.save
             render :show
         else
-            render :json {errors: ['Unable to add item to cart.']}
+            render :json ['Invalid Product'], status: 422
         end
     end
 
     def update
         @cart_item = CartItem.find_by(id: params[:id]) 
         
-        if @cart_item.update(review_params) && @cart_item && current_user.id = @cart_item.user_id
+        if @cart_item.update(cart_item_params) && @cart_item && current_user.id = @cart_item.user_id
             @cart_item
             render :show
         else
@@ -35,7 +45,7 @@ class Api::CartItems_Controller < ApplicationController
 
     private
     def cart_item_params
-        params.require(:cart_item).permit(:quantity, :user_id, :product_id)
+        params.require(:cart_item).permit(:user_id, :product_id)
     end
      
 end

@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
-// import LoginFormModal from '../LoginFormModal';
+import CartIndexPage from '../CartIndexPage';
 import './Navigation.css';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
+
+  const [cartMenu, setCartMenu] = useState(false);
 
   let sessionLinks;
   if (sessionUser) {
@@ -39,12 +41,16 @@ function Navigation() {
           <div className='icons'>
             {sessionLinks}
             <NavLink to="/" className="search"><i className="fa-solid fa-magnifying-glass"></i></NavLink>
-            <NavLink to="/" className="cart"><i className="fa-solid fa-cart-shopping"></i></NavLink>
+
+            <div className='cart-collapse'>
+              <button className="cart" onClick={() => setCartMenu(true)}>
+                <i className="fa-solid fa-cart-shopping"></i>
+              </button>
+              {cartMenu && <div className='cart-page'><CartIndexPage closeCartMenu={setCartMenu}/></div>}
+            </div>
+
           </div>
-
         </div>
-
-
       </li>
     </ul>
   </div>

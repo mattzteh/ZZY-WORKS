@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { createCartItem } from '../../store/cart';
 import { fetchProduct, getProduct } from '../../store/products';
-import ReviewForm from '../ReviewFormModal/ReviewForm';
-import ReviewIndex from '../ReviewIndex';
+import { getCurrentUser } from '../../store/session';
+import ReviewIndex from '../ReviewIndexPage';
 import './ProductShow.css'
 
 const ProductShowPage = () => {
@@ -11,6 +12,12 @@ const ProductShowPage = () => {
     const dispatch = useDispatch();
     const product = useSelector(getProduct(productId));
     const [isOpen, setIsOpen] = useState(false);
+    const currentUserId = useSelector(getCurrentUser);
+
+    let cartItem = {
+        user_id: currentUserId,
+        product_id: productId,
+    };
 
     useEffect(() => {
         dispatch(fetchProduct(productId)); 
@@ -35,7 +42,13 @@ const ProductShowPage = () => {
                     <p>Tax included. Shipping calculated at checkout.</p>
                     <hr/>
                     <div className='product-buttons'>
-                        <button className='cart-button'>Add to cart</button>
+
+
+                        <button onClick={() => dispatch(createCartItem(cartItem))}
+                        className='cart-button'>Add to cart</button>
+
+
+
                         <div className='collapse'>
                             <button className='desc-button' onClick={() => setIsOpen(!isOpen)}>
                                 DESCRIPTION
@@ -51,7 +64,7 @@ const ProductShowPage = () => {
                 </div>
             </div>  
         </div>
-        <ReviewIndex/>
+        <ReviewIndex />
     </>
     )
 }

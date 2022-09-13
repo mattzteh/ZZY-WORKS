@@ -4,19 +4,19 @@ export const RECEIVE_ITEM = 'cartItem/RECEIVE_ITEM';
 export const RECEIVE_ITEMS = 'cartItem/RECEIVE_ITEMS';
 export const REMOVE_ITEM = 'cartItem/REMOVE_ITEM';
 
-const receiveItem = item => ({
+const receiveItem = cartItem => ({
     type: RECEIVE_ITEM,
-    item
+    cartItem
 })
 
-const receiveItems = items => ({
+const receiveItems = cartItems => ({
     type: RECEIVE_ITEMS,
-    items
+    cartItems
 })
 
-const removeItem = itemId => ({
+const removeItem = cartItemId => ({
     type: REMOVE_ITEM,
-    itemId
+    cartItemId
 })
 
 //------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ export const getCartItems = state => {
 //------------------------------------------------------------------------------
 
 export const fetchCartItem = cartItemId => async dispatch => {
-    const response = await csrfFetch(`/api/cartItems/${cartItemId}`);
+    const response = await csrfFetch(`/api/cart_items/${cartItemId}`);
 
     if (response.ok) {
         const data = await response.json();
@@ -41,7 +41,9 @@ export const fetchCartItem = cartItemId => async dispatch => {
 }
 
 export const fetchCartItems = () => async dispatch => {
-    const response = await csrfFetch('/api/cartItems');
+    const response = await csrfFetch('/api/cart_items'
+
+    );
 
     if (response.ok) {
         const data = await response.json();
@@ -51,8 +53,8 @@ export const fetchCartItems = () => async dispatch => {
 
 //------------------------------------------------------------------------------
 
-const createCartItem = cartItem => async dispatch => {
-    const response = await csrfFetch('/api/cartItems', {
+export const createCartItem = cartItem => async dispatch => {
+    const response = await csrfFetch('/api/cart_items', {
         method: 'POST',
         body: JSON.stringify(cartItem)
     })
@@ -63,8 +65,8 @@ const createCartItem = cartItem => async dispatch => {
     }
 }
 
-const updateCartItem = cartItem => async dispatch => {
-    const response = await csrfFetch(`/api/cartItems/${cartItem.id}`, {
+export const updateCartItem = cartItem => async dispatch => {
+    const response = await csrfFetch(`/api/cart_items/${cartItem.id}`, {
         method: 'PATCH',
         body: JSON.stringify(cartItem)
     })
@@ -75,8 +77,8 @@ const updateCartItem = cartItem => async dispatch => {
     }
 }
 
-const deleteCartItem = cartItemId => async dispatch => {
-    const response = await csrfFetch(`/api/cartItems/${cartItemId}`, {
+export const deleteCartItem = cartItemId => async dispatch => {
+    const response = await csrfFetch(`/api/cart_items/${cartItemId}`, {
         method: 'DELETE'
     })
     dispatch(removeItem(cartItemId))

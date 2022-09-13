@@ -10,7 +10,10 @@ Rails.application.routes.draw do
       resources :reviews, only: [:index]
     end
     resources :reviews, only: [:create, :destroy, :update]
-    resources :cart_items, only: [:index, :create, :update, :destroy]
+    resources :cart_items, only: [:index, :create, :destroy]
+
+    patch "cart_items/:cart_item_id/:behavior", to:  "cart_items#update", as: "update"
+
   end
 
   get '*path', to: "static_pages#frontend_index"

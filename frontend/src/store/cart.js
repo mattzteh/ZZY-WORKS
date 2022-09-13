@@ -65,10 +65,13 @@ export const createCartItem = cartItem => async dispatch => {
     }
 }
 
-export const updateCartItem = cartItem => async dispatch => {
-    const response = await csrfFetch(`/api/cart_items/${cartItem.id}`, {
+export const updateCartItem = (cartItem, action)=> async dispatch => {
+    console.log(action)
+    debugger
+    const response = await csrfFetch(`/api/cart_items/${cartItem.id}/${action}`, {
         method: 'PATCH',
-        body: JSON.stringify(cartItem)
+        body: JSON.stringify({cartItem})
+        
     })
 
     if (response.ok) {

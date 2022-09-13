@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams, useHistory} from 'react-router-dom';
 import { createCartItem } from '../../store/cart';
 import { fetchProduct, getProduct } from '../../store/products';
 import { getCurrentUser } from '../../store/session';
@@ -10,9 +10,12 @@ import './ProductShow.css'
 const ProductShowPage = () => {
     const {productId} = useParams();
     const dispatch = useDispatch();
+    const history = useHistory();
     const product = useSelector(getProduct(productId));
     const [isOpen, setIsOpen] = useState(false);
     const currentUserId = useSelector(getCurrentUser);
+    const sessionUser = useSelector(state => state.session.user);
+
 
     let cartItem = {
         user_id: currentUserId,
@@ -23,6 +26,13 @@ const ProductShowPage = () => {
         dispatch(fetchProduct(productId)); 
     }, []);    
     
+    const handleSubmit = (e) => {
+        if (!sessionUser) {
+            history.push('/login')
+        } else {
+            dispatch(createCartItem(cartItem))
+        }
+    }
     
     if (!product) return null;
 
@@ -44,7 +54,7 @@ const ProductShowPage = () => {
                     <div className='product-buttons'>
 
 
-                        <button onClick={() => dispatch(createCartItem(cartItem))}
+                        <button onClick={handleSubmit}
                         className='cart-button'>Add to cart</button>
 
 

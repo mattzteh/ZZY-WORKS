@@ -26,17 +26,18 @@ class Api::CartItemsController < ApplicationController
     end
 
     def update
-        @cart_item = CartItem.find_by(id: params[:id])
+        @cart_item = CartItem.find_by(id: params[:cart_item_id])
 
-        current_user.cart_items.each do |cart_item|
-            if cart_item.product_id == @cart_item.product_id
+        if @cart_item
+            if params[:behavior]== 'increment'
+                @cart_item.quantity += 1
+                @cart_item.save
+                render :show
+            else
                 @cart_item.quantity -= 1
+                @cart_item.save
+                render :show
             end
-        end
-        
-        if @cart_item.update(cart_item_params) && @cart_item && current_user.id = @cart_item.user_id
-            @cart_item
-            render :show
         else
             render json: {errors: ['Unable to update cart.']}
         end

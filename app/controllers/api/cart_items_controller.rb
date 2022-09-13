@@ -15,7 +15,8 @@ class Api::CartItemsController < ApplicationController
                 return
             end
         end 
-        @cart_item = CartItem.create(cart_item_params)
+        @cart_item = CartItem.new(cart_item_params)
+        @cart_item.quantity = 1
 
         if @cart_item.save
             render :show

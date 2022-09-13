@@ -87,9 +87,10 @@ export const deleteCartItem = cartItemId => async dispatch => {
 //------------------------------------------------------------------------------
 
 const cartItemsReducer = (state = {}, action) => {
+    debugger
     switch (action.type) {
         case RECEIVE_ITEMS:
-            return {...state.cartItems};
+            return action.cartItems;
         case RECEIVE_ITEM:
             return {...state, [action.cartItem.id] : action.cartItem};
         case REMOVE_ITEM:

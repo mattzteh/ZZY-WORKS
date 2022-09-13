@@ -15,7 +15,7 @@ const CartIndexPage = ({closeCartMenu}) => {
     useEffect(() => {
         dispatch(fetchCartItems());
         // dispatch(fetchProducts());
-    }, [cartItems.length])
+    }, [])
 
 
     return (
@@ -26,13 +26,14 @@ const CartIndexPage = ({closeCartMenu}) => {
         </button>
 
         <h1>Cart</h1>
-        
+        <ul>
             {
-                cartItems.map(cartItem => <li key= {cartItem.id}><CartIndexItem
+                cartItems.map(cartItem => <li key={cartItem.id}><CartIndexItem
                     cartItem = {cartItem}
-                />
+                    />
                 </li>)
             }
+        </ul>
         </>
     )
 }

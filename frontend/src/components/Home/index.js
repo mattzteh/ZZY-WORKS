@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import './Home.css';
-import m60Splash from './m60_splash.webp'
 import u80Splash from './u80_splash.webp'
+import koyuSplash from './KOYU_splash.webp'
 
 const home = () => {
     return (
@@ -8,13 +9,13 @@ const home = () => {
     <div className="splashpage">
 
         <div className="m60">
-            <button>BUY</button>
+            <Link to="catalog"><button>Shop Now</button></Link>
             <img src={u80Splash}></img>
         </div>
 
         <div className="u80">
             <button>View</button>
-            <img src={m60Splash}></img>
+            <img src={koyuSplash}></img>
         </div>
     </div>
     </>

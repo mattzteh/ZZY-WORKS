@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation, useParams, useHistory} from 'react-router-dom';
+import { useParams, useHistory} from 'react-router-dom';
 import { createCartItem } from '../../store/cart';
 import { fetchProduct, getProduct } from '../../store/products';
 import { getCurrentUser } from '../../store/session';
@@ -31,7 +31,6 @@ const ProductShowPage = () => {
             history.push('/login')
         } else {
             dispatch(createCartItem(cartItem))
-            
         }
     }
     

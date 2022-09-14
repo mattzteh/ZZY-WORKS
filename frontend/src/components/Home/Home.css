@@ -18,6 +18,8 @@ button {
     border-radius: 2px;
 }
 
+/*----------------------------------------------------------------------------*/
+
 .splashpage img {
     width: 100vw;
     animation: zoominoutsinglefeatured 3s;
@@ -47,6 +49,7 @@ button {
     font-size: 20px;
     color: #ffc80f;
     padding: 11px 20px;
+    margin: 10% 18%;
     border-radius: 2em;
 }
 

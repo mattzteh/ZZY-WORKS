@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import ProfileButton from './ProfileButton';
 import CartIndexPage from '../CartIndexPage';
 import { useLocation } from 'react-router-dom';
 import './Navigation.css';

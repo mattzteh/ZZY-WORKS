@@ -46,6 +46,17 @@ export const fetchProduct = (productId) => async dispatch => {
 
 //------------------------------------------------------------------------------
 
+export const getSearchedProducts = (query) => async dispatch => {
+    const response = await csrfFetch(`/api/products/search/${query}`)
+
+    if (response.ok) {
+        const data = await response.json();
+        dispatch(receiveProducts(data));
+    }
+}
+
+//------------------------------------------------------------------------------
+
 const productsReducer = (state = {}, action) => {
     Object.freeze(state);
 

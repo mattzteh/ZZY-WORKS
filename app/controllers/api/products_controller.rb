@@ -12,7 +12,13 @@ class Api::ProductsController < ApplicationController
 
     def search
         query = params[:query]
-        @product = 
+        @products = Product.where('name ILIKE ? description ILIKE',  "%#{query}%", "%#{query}%")
+
+        if @products.length > 0
+            render :index
+        else
+            render json: ["No matches."], status: 404
+        end
     end
 
 end

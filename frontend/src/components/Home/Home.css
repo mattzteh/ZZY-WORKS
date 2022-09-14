@@ -64,7 +64,7 @@ button {
     margin: 0% 15%;
 }
 
-.grid-keycaps img {
+.grid-keycaps img, .thermal-keeb img {
     filter: brightness(50%);
 }
 

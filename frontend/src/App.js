@@ -22,10 +22,6 @@ function App() {
         <LoginFormPage />
       </Route>
 
-      {/* <Route path="/search">
-        <SearchBar />
-      </Route> */}
-
       <Route path="/signup">
         <SignupFormPage />
       </Route>

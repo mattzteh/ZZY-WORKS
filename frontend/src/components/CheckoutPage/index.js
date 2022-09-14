@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useHistory } from "react-router-dom"
-import { deleteCartItems } from "../../store/cart";
 import './CheckoutPage.css'
 const CheckoutPage = () => {
     const dispatch = useDispatch();
@@ -12,7 +11,7 @@ const CheckoutPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         history.push(path)
-        dispatch(deleteCartItems(cartItems))
+
     }
 
     return (

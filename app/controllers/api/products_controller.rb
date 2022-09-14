@@ -10,4 +10,9 @@ class Api::ProductsController < ApplicationController
         render :index
     end
 
+    def search
+        query = params[:query]
+        @product = 
+    end
+
 end

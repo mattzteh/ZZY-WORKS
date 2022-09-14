@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     resource :session, only: [:show, :create, :destroy]
     resources :products, only: [:show, :index] do
       resources :reviews, only: [:index]
+      collection do
+        get 'search/:query', to: "products#search", as: "search"
+      end
     end
     resources :reviews, only: [:create, :destroy, :update]
     resources :cart_items, only: [:index, :create, :destroy]

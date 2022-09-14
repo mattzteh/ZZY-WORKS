@@ -20,7 +20,7 @@ const UserShowPage = () => {
         <>
         <div className="profile-header">
             <h1>My Account</h1>
-            <button onClick={logout}>Log Out</button>
+            <button className="log-out" onClick={logout}>Log Out</button>
         </div>
 
         <div className="account-page">

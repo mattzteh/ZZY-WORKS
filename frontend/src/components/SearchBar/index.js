@@ -1,7 +1,14 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 const SearchBar = ({closeSearchBar}) => {
     const [query, setQuery] = useState("");
+    const dispatch = useDispatch();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch()
+    }
 
     return (
         <>
@@ -12,9 +19,12 @@ const SearchBar = ({closeSearchBar}) => {
                     placeholder="Search our store"
                     onChange={event => setQuery(event.target.value)}
                     />
-                    <button onClick={() => closeSearchBar(true)}></button>
+                    <button 
+                    className="search-enter"
+                    onClick={handleSubmit.then(() => closeSearchBar(true))}>
+                    </button>
                 </div>
-                
+
             </div>
         </>
     )

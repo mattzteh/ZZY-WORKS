@@ -1,0 +1,38 @@
+.profile-header {
+    margin-top: 5%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.profile-header h1 {
+    font-size: 35px;
+    margin-bottom: 2.5%;
+}
+
+.profile-header button {
+    border: none;
+    font-size: 15px;
+}
+
+.account-page {
+    display: flex;
+    height: 100vh;
+    margin: 0 18%;
+}
+
+.account-page h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.order-history {
+    flex: 70%
+}
+
+.account-details {
+    flex: 30%
+}
+
+.account-details h5 {
+    margin-bottom: 15px;
+}

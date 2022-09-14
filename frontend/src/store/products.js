@@ -9,7 +9,6 @@ const receiveProducts = products => ({
 })
 
 const receiveProduct = payload => {
-    // debugger
    return { type: RECEIVE_PRODUCT,
     payload}
 }
@@ -37,7 +36,6 @@ export const fetchProducts = () => async dispatch => {
 }
 
 export const fetchProduct = (productId) => async dispatch => {
-    // debugger
     const response = await csrfFetch(`/api/products/${productId}`)
 
     if (response.ok) {
@@ -52,7 +50,6 @@ const productsReducer = (state = {}, action) => {
     Object.freeze(state);
 
     let newState = Object.assign({},state)
-    // debugger
     switch (action.type) {
         case RECEIVE_PRODUCTS:
             return {...action.products};

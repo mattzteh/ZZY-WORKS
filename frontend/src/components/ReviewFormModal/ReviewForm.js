@@ -10,6 +10,8 @@ const ReviewForm = ({showModal}) => {
     const [rating, setRating] = useState(1);
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
+    const [errors, setErrors] = useState([]);
+
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -41,6 +43,10 @@ const ReviewForm = ({showModal}) => {
     <div className="review-form-container">
 
         <form className="review-form" onSubmit={handleSubmit}>
+            <ul className="errorbox">
+                {errors.map((error) => <li className="errors" key={error}>{error}</li>)}
+            </ul>
+
             <h2>Write a Review</h2>
             <label>Title
                 <br/>
@@ -49,6 +55,7 @@ const ReviewForm = ({showModal}) => {
                 value={title}
                 placeholder='Title your review here...'
                 onChange={update('title')}
+                required
                 />
             </label>
 
@@ -60,6 +67,7 @@ const ReviewForm = ({showModal}) => {
                 value={body}
                 placeholder='Write your review here...'
                 onChange={update('body')}
+                required
                 />
             </label>
 
@@ -72,6 +80,7 @@ const ReviewForm = ({showModal}) => {
                 max='5'
                 value={rating}
                 onChange={update('rating')}
+                required
                 />
             </label>
 

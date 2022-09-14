@@ -1,6 +1,6 @@
 class Api::ReviewsController < ApplicationController
 
-    wrap_parameters include: Review.attribute_names + ['user_id', 'product_id']
+    # wrap_parameters include: Review.attribute_names + ['user_id', 'product_id']
 
     def create
         @review = current_user.reviews.new(review_params)
@@ -8,13 +8,10 @@ class Api::ReviewsController < ApplicationController
         if @review.save
             render :show
         else
-            render json: { errors: ['Invalid input.'] }
+            render json: { errors: ['Invalid input'] }
         end
     end
 
-    # def show
-    #     @review = Review.find_by(id: params[:id])
-    # end
 
     def update
         @review = current_user.reviews.find_by(id: [params[:id]])
@@ -35,9 +32,7 @@ class Api::ReviewsController < ApplicationController
             render :show
         end
     end
-
     def index
-        # debugger
         @reviews = Review.all
         render :index
     end

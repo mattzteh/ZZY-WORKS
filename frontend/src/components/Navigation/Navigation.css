@@ -1,12 +1,10 @@
 .navitems {
     font-size: 17px;
-    list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     text-decoration: none;
     font-style: none;
-    font-weight: 400;
 }
 
 
@@ -19,6 +17,7 @@
     position: sticky;
     top: 0px;
     width: 100%;
+    margin: 0 18%;
 }
 
 .name {
@@ -26,8 +25,7 @@
     cursor: pointer;
     font-weight:bold;
     color: black;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-right: 50px;
 }
 
 .nav-name {
@@ -37,7 +35,7 @@
 
 .nav-links {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .store {
@@ -70,7 +68,6 @@
 .icons {
     display: flex;
     justify-content: space-between;
-    margin-right: 100px;
     font-size: 20px;
 }
 

@@ -13,7 +13,7 @@
 #
 class Review < ApplicationRecord
 
-    validates :rating, :title, :body, presence: true
+    validates :rating, :title, :body, presence: true, length: {minimum: 1}
     validates :rating, numericality: { in: 1..5 }
 
 #-------------------------------------------------------------------------------

@@ -45,7 +45,7 @@ const SearchBar = ({closeSearch}) => {
                         </button>
 
                         <input
-                        type='search'
+                        autoFocus='autofocus'
                         value={query}
                         placeholder="Search our store"
                         onChange={update('query')}

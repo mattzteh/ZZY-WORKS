@@ -1,6 +1,6 @@
 .search-page {
     height: 10vh;
-}
+    border-bottom: solid rgb(237, 230, 230) 1px;}
 
 .search-bar-dropdown {
     display: flex;
@@ -12,12 +12,12 @@
     height: 100%;
     display: flex;
     align-items: center;
-    font-size: 30px;
 }
 
 .search-page input, .search-page button {
     outline: none;
     border: none;
+    font-size: 30px;
 }
 
 .search-page input {

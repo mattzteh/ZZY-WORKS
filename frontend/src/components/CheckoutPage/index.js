@@ -1,9 +1,19 @@
-import { useSelector } from "react-redux"
-import { Link } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
+import { Link, useHistory } from "react-router-dom"
+import { deleteCartItems } from "../../store/cart";
 import './CheckoutPage.css'
 const CheckoutPage = () => {
-
+    const dispatch = useDispatch();
+    const history = useHistory();
     const currentUser = useSelector(state => state.session.user)
+    const cartItems = useSelector(state => Object.values(state.cartItems))
+
+    let path = '/'
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        history.push(path)
+        dispatch(deleteCartItems(cartItems))
+    }
 
     return (
         <>
@@ -12,7 +22,10 @@ const CheckoutPage = () => {
             <div className="checkout-left-column">
                 <h1>ZZY WORKS</h1>
 
-                <form className="checkout-form">
+                <form 
+                className="checkout-form"
+                onSubmit={handleSubmit}
+                >
 
                     <h2>Contact Information</h2>
 

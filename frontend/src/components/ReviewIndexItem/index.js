@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import reviewsReducer, { deleteReview } from '../../store/reviews';
+import { deleteReview } from '../../store/reviews';
 import { getCurrentUser } from '../../store/session';
 import EditReviewFormModal from '../EditReviewFormModal';
 import './ReviewIndexItem.css'

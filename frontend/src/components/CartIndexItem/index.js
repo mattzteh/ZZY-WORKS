@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { createCartItem, updateCartItem, deleteCartItem } from '../../store/cart';
+import { updateCartItem, deleteCartItem } from '../../store/cart';
 import './CartIndexItem.css'
 
 const CartIndexItem = ({cartItem}) => {

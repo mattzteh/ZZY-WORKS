@@ -1,15 +1,13 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteCartItem, fetchCartItems, getCartItems } from '../../store/cart'
-import { getCurrentUser } from '../../store/session';
+import { fetchCartItems, getCartItems } from '../../store/cart'
 import CartIndexItem from '../CartIndexItem';
 import './CartIndexPage.css'
 
 const CartIndexPage = ({closeCartMenu}) => {
     const dispatch = useDispatch();
     const cartItems = useSelector(getCartItems);
-    const currentUserId = useSelector(getCurrentUser);
 
     let cartMessage;
     if (cartItems.length == 0) {
@@ -27,6 +25,8 @@ const CartIndexPage = ({closeCartMenu}) => {
             </Link>
         )
     }
+
+
 
 
     useEffect(() => {

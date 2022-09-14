@@ -7,7 +7,6 @@ import './ReviewForm.css'
 
 function ReviewFormModal() {
   const [showModal, setShowModal] = useState(false);
-  const sessionUser = useSelector(state => state.session.user);
 
   return (
     <>

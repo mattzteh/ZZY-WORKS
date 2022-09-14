@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
-import { getCartItems } from "../../store/cart"
 import './CheckoutPage.css'
 const CheckoutPage = () => {
 

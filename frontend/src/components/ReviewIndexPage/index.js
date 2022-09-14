@@ -8,14 +8,8 @@ import './ReviewIndex.css';
 import ReviewFormModal from "../ReviewFormModal";
 
 const ReviewIndex = () => {
-    const dispatch = useDispatch();
-    const productId = useParams();
     const reviews = useSelector(getReviews)
     const sessionUser = useSelector(state => state.session.user);
-
-    // useEffect(() => {
-    //     // dispatch(getReviews)
-    // },[productId])
 
     let modalButton;
     if (sessionUser) {

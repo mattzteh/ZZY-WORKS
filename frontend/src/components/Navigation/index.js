@@ -51,12 +51,12 @@ function Navigation() {
     </ul>
    
     <div className='icons'>
-      {sessionLinks}
-      <NavLink to="/" className="search"><i className="fa-solid fa-magnifying-glass"></i></NavLink>
+      <div className='profile-icon'>{sessionLinks}</div>
+      <div className="search-icon"><NavLink to="/"><i className="fa-solid fa-magnifying-glass"></i></NavLink></div>
 
       <div className='cart-collapse'>
         <button className="cart" onClick={() => setCartMenu(true)}>
-          <i className="fa-solid fa-cart-shopping"></i>
+          <div className='cart-icon'><i className="fa-solid fa-cart-shopping"></i></div>
         </button>
         {cartMenu && <CartIndexPage closeCartMenu={setCartMenu}/>}
       </div>

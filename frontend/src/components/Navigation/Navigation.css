@@ -40,17 +40,17 @@
 
 .icons {
     display: flex;
-    font-size: 20px;
-}
-
-.user-button {
-    border: none;
-    font-size: 20px;
-}
-
-.cart {
-    border-style: none;
     cursor: pointer;
+}
+
+.profile-icon, .search-icon, .cart-icon {
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.cart-collapse button {
+    border: none;
+    padding: 0 0;
 }
 
 .hide {

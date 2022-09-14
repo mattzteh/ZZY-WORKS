@@ -42,8 +42,6 @@
     justify-content: center;
 }
 
-
-
 .checkout {
     cursor: pointer;
     background-color: black;
@@ -69,5 +67,7 @@
     margin-top: 50px;
     margin-left: 10%;
 }
+
+
 
 

@@ -15,16 +15,17 @@ const CheckoutPage = () => {
 
                 <form className="checkout-form">
 
-                    <h1>Contact Information</h1>
+                    <h2>Contact Information</h2>
 
-                        <h1 className="contact-info">
+                        <h3 className="contact-info">
                         {currentUser.firstName}
                         {` ${currentUser.lastName} `}
                         ({currentUser.email})
-                        </h1>
+                        </h3>
 
                         <label className="email-button">
                             <input
+                            className="checkbox"
                             type='checkbox'
                             />
                             Email me with news and offers
@@ -33,7 +34,7 @@ const CheckoutPage = () => {
                     <br/>
 
 
-                    <h1>Shipping Address</h1>
+                    <h2>Shipping Address</h2>
 
                     <br/>
 
@@ -100,14 +101,21 @@ const CheckoutPage = () => {
                     placeholder="Phone"
                     />
 
+                    <div className="bottom-checkout-form">
                         <label className="save-info">
                         <input
-                        // className="save-info-button"
+                        className="checkbox"
                         type='checkbox'
                         />
                         Save info for next time
                         </label>
 
+                        <button 
+                        className="shipping-button"
+                        >
+                        Continue to Shipping
+                        </button>
+                    </div>
                 </form>
 
                <Link to="/catalog">

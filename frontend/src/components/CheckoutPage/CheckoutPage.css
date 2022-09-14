@@ -1,11 +1,24 @@
 .checkout-page {
     display: grid;
-    grid-template-columns: 57% 43%;
+    grid-template-columns: 55% 45%;
     background-color: whitesmoke;
+    height: 100vh;
 }
 
 .checkout-page h1 {
-    margin: 15px 0px;
+    font-size: 28px;
+    margin-top: 40px;
+    background-color: whitesmoke;
+}
+
+.checkout-page h2 {
+    font-size: 18px;
+    background-color: whitesmoke;
+    margin-bottom: 10px;
+}
+
+.checkout-page h3 {
+    font-size: 15px;
     background-color: whitesmoke;
 }
 
@@ -16,7 +29,7 @@
 
 .checkout-left-column {
     grid-column: 1;
-    margin-left: 20%;
+    margin-left: 40%;
     border-right: solid lightgrey 1px;
     background-color: whitesmoke;
 }
@@ -108,4 +121,25 @@
 .catalog-return i {
     background-color: whitesmoke;
     margin-right: 5px;
+}
+
+.bottom-checkout-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+input.checkbox {
+    margin-right: 8px;
+}
+
+.shipping-button {
+    color: #e8e8e1;
+    background-color: black;
+    border: none;
+    height: 3rem;
+    width: 33%;
+    padding: 0 20px;
+    cursor: pointer;
 }

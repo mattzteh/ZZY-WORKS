@@ -1,3 +1,7 @@
+.products {
+    margin-top: 50px;
+}
+
 
 .products ul {
     display: flex;

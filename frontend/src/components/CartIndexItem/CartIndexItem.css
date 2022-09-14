@@ -38,7 +38,6 @@
 .cart-index-item button {
     border: none;
     opacity: .6;
-    padding: 10px 10px;
     border-radius: 0;
 }
 
@@ -56,6 +55,7 @@
 
 .cart-buttons i {
     background-color: transparent;
+    margin: 10px 10px;
 }
 
 .cart-index-item h6 {

@@ -1,12 +1,3 @@
-@keyframes zoominoutsinglefeatured {
-    0% {
-        transform: scale(1.2, 1.2);
-    }
-    100% {
-        transform: scale(1.0, 1.0);
-    }
-}
-
 * {
     background-color: #e6ded2;
     color: #1c1d1d;
@@ -19,28 +10,76 @@ button {
 }
 
 /*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
 
-.splashpage img {
-    width: 100vw;
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0);
+    }
+}
+
+.u80 img {
     animation: zoominoutsinglefeatured 3s;
 }
 
-.m60, .u80 {
+/*----------------------------------------------------------------------------*/
+
+.u80,
+.thermal-keeb,
+.grid-keycaps {
     position: relative;
+}
+
+.splashpage img {
+    width: 100vw;
+}
+
+.splashpage h1,
+.splashpage h2 {
+    background-color: transparent;
+    color: #ffffff;
 }
 
 .splashpage h1 {
     font-size: 40px;
-    color: #ffffff;
-    background-color: transparent;
-    position: absolute;
-    z-index: 1;
+    padding: 20px 0px;
 }
 
-.m60 button, .u80 button {
+.splashpage h2 {
+    font-size: 25px;
+    padding: 20px 0px;
+}
+
+.splash-desc {
+    display: grid;
+    align-items: center;
+    z-index: 1;
     position: absolute;
-    bottom: 5px;
-    right: 5px;
+    background-color: transparent;
+    margin: 0% 15%;
+}
+
+.grid-keycaps img {
+    filter: brightness(50%);
+}
+
+/*----------------------------------------------------------------------------*/
+
+.thermal-keeb .splash-desc {
+    margin-top: 10%;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.u80 button,
+.thermal-keeb button,
+.grid-keycaps button {
+    position: absolute;
     z-index: 1;
     background-color: transparent;
     border-style: none;
@@ -49,11 +88,12 @@ button {
     font-size: 20px;
     color: #ffc80f;
     padding: 11px 20px;
-    margin: 10% 18%;
     border-radius: 2em;
 }
 
-.m60 button:hover, .u80 button:hover {
+.u80 button:hover,
+.thermal-keeb button:hover,
+.grid-keycaps button:hover {
     background-color: #ffc80f;
     -webkit-transition: background-color 400ms linear;
     -ms-transition: background-color 400ms linear;
@@ -63,7 +103,6 @@ button {
     -ms-transition: color 400ms linear;
     transition: color 400ms linear;
 }
-
 
 
 

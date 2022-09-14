@@ -8,6 +8,8 @@ import UserShowPage from "./components/UserShowPage";
 import ProductIndexPage from "./components/ProductIndexPage";
 import ProductShowPage from "./components/ProductShowPage";
 import CheckoutPage from "./components/CheckoutPage";
+import SearchBar from "./components/SearchBar";
+import SearchIndexPage from "./components/SearchIndexPage";
 
 function App() {
 
@@ -20,12 +22,20 @@ function App() {
         <LoginFormPage />
       </Route>
 
+      {/* <Route path="/search">
+        <SearchBar />
+      </Route> */}
+
       <Route path="/signup">
         <SignupFormPage />
       </Route>
 
       <Route path="/catalog">
         <ProductIndexPage />
+      </Route>
+
+      <Route path="/SearchResults">
+        <SearchIndexPage />
       </Route>
 
       <Route path="/checkout">

@@ -1,13 +1,34 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { getSearchedProducts } from "../../store/products";
+import './SearchBar.css'
 
-const SearchBar = ({closeSearchBar}) => {
+const SearchBar = ({closeSearch}) => {
     const [query, setQuery] = useState("");
     const dispatch = useDispatch();
+    const history = useHistory();
+    let path = "/SearchResults"
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch()
+        dispatch(getSearchedProducts(query))
+        closeSearch(false)
+        history.push(path)
+    }
+
+    const update = (field) => {
+        return e => {
+            switch (field) {
+                case 'query':
+                    setQuery(e.target.value)
+                    break;
+                default:
+                    console.log('Field name error.');
+                    break;     
+            }
+        }
     }
 
     return (
@@ -15,14 +36,23 @@ const SearchBar = ({closeSearchBar}) => {
             <div className="search-page">
 
                 <div className="search-bar-dropdown">
-                    <input
-                    placeholder="Search our store"
-                    onChange={event => setQuery(event.target.value)}
-                    />
-                    <button 
-                    className="search-enter"
-                    onClick={handleSubmit.then(() => closeSearchBar(true))}>
-                    </button>
+                    <form onSubmit={handleSubmit}>
+
+                        <button
+                        type="submit"
+                        className="search-enter">
+                        <i className="fa-solid fa-magnifying-glass"></i>
+                        </button>
+
+                        <input
+                        type='search'
+                        value={query}
+                        placeholder="Search our store"
+                        onChange={update('query')}
+                        />
+
+                    </form>
+                    <button onClick={() => closeSearch(false)}>x</button>
                 </div>
 
             </div>

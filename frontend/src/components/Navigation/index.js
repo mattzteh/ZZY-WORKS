@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import CartIndexPage from '../CartIndexPage';
 import { useLocation } from 'react-router-dom';
 import './Navigation.css';
+import SearchBar from '../SearchBar';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -11,6 +12,8 @@ function Navigation() {
   console.log(location)
 
   const [cartMenu, setCartMenu] = useState(false);
+
+  const [toggleSearch, setToggleSearch] = useState(false);
 
   const navToggle = () => {
     if (location.pathname === '/checkout') {
@@ -33,6 +36,8 @@ function Navigation() {
     );
   }
 
+  if (toggleSearch) return <SearchBar closeSearch={setToggleSearch}/>
+
   return (
   <>
   <div className={navToggle()}>
@@ -51,7 +56,7 @@ function Navigation() {
    
     <div className='icons'>
       <div className='profile-icon'>{sessionLinks}</div>
-      <div className="search-icon"><NavLink to="/"><i className="fa-solid fa-magnifying-glass"></i></NavLink></div>
+      <div className="search-icon" onClick={(() => setToggleSearch(true))}><i className="fa-solid fa-magnifying-glass"></i></div>
 
       <div className='cart-collapse'>
         <button className="cart" onClick={() => setCartMenu(true)}>

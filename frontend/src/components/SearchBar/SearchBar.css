@@ -1,0 +1,25 @@
+.search-page {
+    height: 10vh;
+}
+
+.search-bar-dropdown {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.search-page form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+.search-page input, .search-page button {
+    outline: none;
+    border: none;
+}
+
+.search-page input {
+    width: fit-content;
+}

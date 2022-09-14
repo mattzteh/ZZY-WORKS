@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
-import u80Splash from './u80_splash.webp'
+import u80Splash from './u80Splash.webp'
 import thermalSplash from './thermalSplash.jpeg'
 import keycapSplash from './keycapSplash.jpeg'
 

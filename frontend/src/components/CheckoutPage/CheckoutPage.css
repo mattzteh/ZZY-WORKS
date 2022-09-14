@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 55% 45%;
     background-color: whitesmoke;
-    height: 100vh;
+    height: 100%;
 }
 
 .checkout-page h1 {
@@ -32,11 +32,14 @@
     margin-left: 40%;
     border-right: solid lightgrey 1px;
     background-color: whitesmoke;
+    height: 100%;
+    padding-bottom: 15%;
 }
 
 .checkout-right-column {
     grid-column: 2;
     background-color:rgb(236, 236, 236);
+    height: 100%;
 }
 
 .checkout-form {

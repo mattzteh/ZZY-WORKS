@@ -38,19 +38,20 @@
     bottom: 0;
     z-index: 1;
     background-color: transparent;
+    width: 100%;
+    padding: 25% 0;
 }
 
 .index-add-cart, .index-details {
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    cursor: pointer;
+    justify-content: center;
     background-color: black;
     color: #e8e8e1;
-    border-style: none;
+    border: none;
     height: 3em;
-    width: 7rem;
+    width: 10em;
+    cursor: pointer;
 }
 
 .index-add-cart:hover, .index-details:hover {

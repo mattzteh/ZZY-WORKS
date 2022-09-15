@@ -2,13 +2,28 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { createCartItem } from '../../store/cart';
 import './ProductIndexItem.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCurrentUser } from '../../store/session';
 
 const ProductIndexPage = ({product}) => {
+    
+    const dispatch = useDispatch();
 
     const photo = product.photoUrl[0];
     const [onHover, setOnHover] = useState(false)
-    const dispatch = useDispatch();
+
+    const currentUserId = useSelector(getCurrentUser)
+    const productId = product.id;
+
+    let cartItem = {
+        user_id: currentUserId,
+        product_id: productId,
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(createCartItem(cartItem));
+    }
 
     return (
 
@@ -23,7 +38,10 @@ const ProductIndexPage = ({product}) => {
             </div>
             {onHover && (
                 <div className='product-index-buttons'>
-                        <button className='index-add-cart'>Add to Cart</button>
+                        <button 
+                        onClick={handleSubmit}
+                        className='index-add-cart'
+                        >Add to Cart</button>
                         
                         <Link to={`/products/${product.id}`} 
                         style={{ textDecoration:'none'}}>

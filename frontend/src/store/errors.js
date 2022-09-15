@@ -19,7 +19,9 @@ const getReviewError = error => ({
 
 const errorsReducer = (state = {}, action) => {
     switch (action.type) {
-        case CREATE_REVIEW:
+        case RECEIVE_ERRORS:
+        return action
+        r
 
     }
 

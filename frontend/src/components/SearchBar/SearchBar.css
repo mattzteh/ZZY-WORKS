@@ -21,6 +21,7 @@
 
 .search-page {
     height: 10vh;
+    width: 100vw;
     border-bottom: solid rgb(237, 230, 230) 1px;
     -webkit-animation: mover 500ms ease;
     animation: mover 500ms ease;
@@ -28,14 +29,17 @@
 
 .search-bar-dropdown {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 100%;
+    width: 100vw;
+    padding: 0 18%;
 }
 
 .search-page form {
     height: 100%;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .search-page input, .search-page button {
@@ -45,5 +49,5 @@
 }
 
 .search-page input {
-    width: fit-content;
+    width: 100%;
 }

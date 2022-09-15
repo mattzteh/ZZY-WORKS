@@ -3,7 +3,7 @@ import ProductIndexItem from "../ProductIndexItem";
 import './SearchIndexPage.css'
 
 const SearchIndexPage = () => {
-    const products = useSelector(state => Object.values(state.products));
+    let products = useSelector(state => Object.values(state.products));
 
     let component;
     if (products.length <= 0) {
@@ -16,6 +16,7 @@ const SearchIndexPage = () => {
         component = (  
             <></>   
     )}
+    if(!products.length) return null
 
     return (
         <>

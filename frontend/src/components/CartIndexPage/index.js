@@ -47,8 +47,6 @@ const CartIndexPage = ({closeCartMenu}) => {
                 </button>
             </div>
 
-            <hr/>
-
             <ul>
                 {
                     cartItems.map(cartItem => <li key={cartItem.id}><CartIndexItem

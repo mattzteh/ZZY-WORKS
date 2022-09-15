@@ -16,6 +16,7 @@ const SearchIndexPage = () => {
         component = (  
             <></>   
     )}
+    
     if(!products.length) return null
 
     return (

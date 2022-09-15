@@ -63,6 +63,7 @@ const EditReviewForm = ({review, showModal}) => {
                 type='text'
                 value={body}
                 onChange={update('body')}
+                required
                 />
             </label>
 
@@ -75,6 +76,7 @@ const EditReviewForm = ({review, showModal}) => {
                 max="5"
                 value={rating}
                 onChange={update('rating')}
+                required
                 />
             </label>
 

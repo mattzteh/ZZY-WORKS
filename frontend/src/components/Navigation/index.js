@@ -48,7 +48,7 @@ function Navigation() {
           <div className='nav-links'>
             <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='store'>Store</div></NavLink>
             <NavLink exact to="/catalog" style={{ textDecoration: 'none' }}><div className='catalog'>Catalog</div></NavLink>
-            <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='studio'>About Me</div></NavLink>
+            <NavLink exact to="/about-me" style={{ textDecoration: 'none' }}><div className='about-me'>About Me</div></NavLink>
           </div>
       </li>
     </ul>

@@ -12,7 +12,7 @@ class Api::ProductsController < ApplicationController
 
     def search
         query = params[:query]
-        @products = Product.where('name ILIKE ? OR description ILIKE ?',  "%#{query}%", "%#{query}%")
+        @products = Product.where('name ILIKE ?', "%#{query}%")
 
         if @products.length > 0
             render :index

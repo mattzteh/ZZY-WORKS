@@ -8,7 +8,7 @@ const SearchBar = ({closeSearch}) => {
     const [query, setQuery] = useState("");
     const dispatch = useDispatch();
     const history = useHistory();
-    let path = "/SearchResults"
+    let path = "/search-results"
 
 
     const handleSubmit = (e) => {

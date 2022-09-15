@@ -17,6 +17,10 @@
     margin: auto;
 }
 
+.product-photo:hover {
+    filter: blur(4px);
+}
+
 .index-area h1 {
     font-size: 18px;
     margin-bottom: 15px;

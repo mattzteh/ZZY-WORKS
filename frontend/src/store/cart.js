@@ -66,7 +66,6 @@ export const createCartItem = cartItem => async dispatch => {
 }
 
 export const updateCartItem = (cartItem, action)=> async dispatch => {
-    console.log(action)
     const response = await csrfFetch(`/api/cart_items/${cartItem.id}/${action}`, {
         method: 'PATCH',
         body: JSON.stringify({cartItem})

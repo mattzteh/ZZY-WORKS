@@ -9,10 +9,8 @@ import SearchBar from '../SearchBar';
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
   const location = useLocation();
-  console.log(location)
 
   const [cartMenu, setCartMenu] = useState(false);
-
   const [toggleSearch, setToggleSearch] = useState(false);
 
   const navToggle = () => {
@@ -23,6 +21,7 @@ function Navigation() {
     }
   }
 
+ 
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
@@ -38,6 +37,7 @@ function Navigation() {
 
   if (toggleSearch) return <SearchBar closeSearch={setToggleSearch}/>
 
+
   return (
   <>
   <div className={navToggle()}>
@@ -49,7 +49,6 @@ function Navigation() {
             <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='store'>Store</div></NavLink>
             <NavLink exact to="/catalog" style={{ textDecoration: 'none' }}><div className='catalog'>Catalog</div></NavLink>
             <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='studio'>About Me</div></NavLink>
-            {/* <NavLink exact to="/" style={{ textDecoration: 'none' }}><div className='updates'>Updates</div></NavLink> */}
           </div>
       </li>
     </ul>

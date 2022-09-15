@@ -8,7 +8,6 @@ import UserShowPage from "./components/UserShowPage";
 import ProductIndexPage from "./components/ProductIndexPage";
 import ProductShowPage from "./components/ProductShowPage";
 import CheckoutPage from "./components/CheckoutPage";
-import SearchBar from "./components/SearchBar";
 import SearchIndexPage from "./components/SearchIndexPage";
 
 function App() {

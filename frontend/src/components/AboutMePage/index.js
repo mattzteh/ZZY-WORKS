@@ -10,10 +10,10 @@ const AboutMe = () => {
                 <h1>My Links</h1>
                 <div className='my-links'>
                 <a href='https://www.linkedin.com/in/mattzteh/' target="_blank">
-                    <i class="fa-brands fa-linkedin"></i></a>
+                    <i className="fa-brands fa-linkedin"></i></a>
 
                 <a href='https://www.github.com/mattzteh' target="_blank">
-                    <i class="fa-brands fa-square-github"></i></a>
+                    <i className="fa-brands fa-square-github"></i></a>
                 </div>
             </div>
 

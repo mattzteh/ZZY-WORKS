@@ -54,6 +54,15 @@
     flex-direction: column;
 }
 
+.cart-button:hover {
+    background-color: #ffc80f;
+    color: black;
+    border-color: black;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
 .desc-button {
     font-size: 18px;
     display: flex;

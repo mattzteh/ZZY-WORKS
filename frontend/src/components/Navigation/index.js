@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import CartIndexPage from '../CartIndexPage';
@@ -9,9 +9,23 @@ import SearchBar from '../SearchBar';
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
   const location = useLocation();
-
   const [cartMenu, setCartMenu] = useState(false);
   const [toggleSearch, setToggleSearch] = useState(false);
+
+//------------------------------------------------------------------------------
+  const cartItemChanges = useSelector(state => {
+    return Object.values(state.cartItems).reduce((acc, item) => {
+      return acc + item.quantity
+    }, 0)
+  })
+  useEffect(() => {
+    setCartMenu(true)
+  }, [cartItemChanges])
+
+  useEffect(() => {
+    setCartMenu(false)
+  }, [location])
+//------------------------------------------------------------------------------ 
 
   const navToggle = () => {
     if (location.pathname === '/checkout') {
@@ -21,7 +35,6 @@ function Navigation() {
     }
   }
 
- 
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (

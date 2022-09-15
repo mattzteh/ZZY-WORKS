@@ -1,5 +1,6 @@
 .index-area {
     margin: 0 10%;
+    position: relative;
 }
 
 .product-index {
@@ -14,5 +15,50 @@
     width: 20vw;
     height: auto;
     margin: auto;
+}
+
+.index-area h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.index-area h2 {
+    font-size: 15px;
+    color: rgb(121, 121, 121);
+}
+
+.product-index-buttons {
+    display: grid;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.index-add-cart, .index-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    background-color: black;
+    color: #e8e8e1;
+    border-style: none;
+    height: 3em;
+    width: 7rem;
+}
+
+.index-add-cart:hover, .index-details:hover {
+    background-color: #ffc80f;
+    color: black;
+    border-color: black;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
 }
 

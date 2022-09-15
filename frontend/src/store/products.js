@@ -5,7 +5,6 @@ export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT'
 export const RECEIVE_ERRORS = 'products/RECEIVE_ERRORS'
 
 const receiveProducts = products => {
-    // debugger
     return { type: RECEIVE_PRODUCTS, products}
     }
 
@@ -14,7 +13,6 @@ const receiveProduct = payload => {
 }
 
 const receiveErrors= (errors)=>{
-    debugger
     return{
         type: RECEIVE_ERRORS,
         errors
@@ -56,9 +54,8 @@ export const fetchProduct = (productId) => async dispatch => {
 
 export const getSearchedProducts = (query) => async dispatch => {
     const response = await csrfFetch(`/api/products/search/${query}`)
-    if (response.status >= 400) {
-        throw response
-    }
+    if (response.status >= 400) throw response;
+    
     // if (response.status >= 400) {
     //     const errors = await response.text()
     //     dispatch(receiveErrors(errors))

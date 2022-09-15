@@ -18,6 +18,7 @@ function Navigation() {
       return acc + item.quantity
     }, 0)
   })
+
   useEffect(() => {
     setCartMenu(true)
   }, [cartItemChanges])

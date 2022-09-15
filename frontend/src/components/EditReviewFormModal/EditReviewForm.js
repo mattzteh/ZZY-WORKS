@@ -52,6 +52,7 @@ const EditReviewForm = ({review, showModal}) => {
                 type='text'
                 value={title}
                 onChange={update('title')}
+                required
                 />
             </label>
 

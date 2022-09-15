@@ -1,8 +1,12 @@
 class Api::CartItemsController < ApplicationController
 
     def index
-        @cart_items = current_user.cart_items
-        render :index
+        if current_user
+            @cart_items = current_user.cart_items
+            render :index
+        else 
+            render json: []
+        end 
     end
 
     def create

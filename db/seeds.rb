@@ -30,16 +30,89 @@ ApplicationRecord.transaction do
     password: 'password'
   )
 
-  # More users
-  # 10.times do 
-  #   User.create!({
-  #     username: Faker::Internet.unique.username(specifier: 3),
-  #     email: Faker::Internet.unique.email,
-  #     password: 'password'
-  #   }) 
-  # end
 
+puts "Creating products..."
 # OFFICIAL SEED DATA------------------------------------------------------------
+
+thermal_keyboard = Product.create(
+  name: 'THERMAL SEQ2 KEYBOARD',
+  price: 420,
+  description: 'SWITCHES, STABILISERS AND KEYCAPS ARE NOT INCLUDED!
+
+  Switches/Stabilisers are offered in the THERMAL+ Starter Kit
+  Plates [Extra]: https://ramaworks.store/products/thermal-seq2-plate
+  The THERMAL is not compatible with the W01-A Internal Weight or W02-A Internal Dampener.
+
+  The BEAM or ROSE plate (see configurations below) is already included with each THERMAL.
+
+  Product Color Options:
+
+  KURO (Black) with BEAM plate (polished aluminium)
+  MOON (Grey) with BEAM plate (polished aluminium)
+  ROSE (Rose Gold) with ROSE plate (polished aluminium)
+  MILK (White) with BEAM plate (polished aluminium)
+  SOYA (Cream) with BEAM plate (polished aluminium)
+  PCB:
+
+  The WT60-B PCB uses Kailh hotswap sockets for assembly without soldering.
+
+  Finish:
+
+  Beadblasted Anodized Aircraft-Grade Aluminium Body & Polished Anodized Aircraft-Grade Aluminium Plate
+  The MILK and SOYA editions are Electrophoresis coated
+  Interface:
+
+  USB-C
+
+  Weight (built - estimate):
+
+  1500g
+
+  Case Slope Angle:
+
+  8.0°
+
+  Features:
+
+  Leaf Spring Mount, 1.5mm Aluminium Plate with 8 x 90mm x 1.5mm x 1.5mm leaf springs
+  Hotswap PCB with In-Switch RGB LED
+  PCB compatible with QMK firmware, configurable by VIA configurator
+  PCB/plate mounting hardware for stable hotswap performance.
+  Contents:
+
+  1 x Top Enclosure (HHKB, Aluminium)
+  1 x Base Enclosure (Aluminium)
+  1 x Plate (BEAM or ROSE, Polished Aluminium)
+  8 x RW Black M3x12 T10 Fixtures (Enclosure)
+  8 x RW Black M2x4 T10 Fixtures (Daughterboard + Plate to top-housing)
+  6 x RW Black M2x3 T10 Fixtures (Sub-assembly)
+  6 x RW Black M2x3 CSK T6 Fixtures (Sub-assembly)
+  6 x RW Black M2x3.5 Spacer (Sub-assembly)
+  1 x wilba.tech WT60-B PCB
+  1 x XO Switchpuller
+  1 x RW T10 Torx Tool
+  1 x RW T6 Torx Tool
+  1 x Black Metal End USB-C to USB-A cable (USB 3.0) (Braided) - 1.5M
+  1 x Set of PORON Foam Pads
+  1 x Set of Feet
+  1 x Instruction Booklet
+  1 x Various Packaging'
+)
+
+thermal_keyboard_1 = {
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/KEYBOARD_1.webp"),
+  filename: "KEYBOARD_1.webp"
+}
+
+thermal_keyboard_2 = {
+  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/KEYBOARD_2.webp"),
+  filename: "KEYBOARD_1.webp"
+}
+
+thermal_keyboard.photos.attach([thermal_keyboard_1, thermal_keyboard_2])
+
+#-------------------------------------------------------------------------------
+
 duck_switches = Product.create(
   name: 'DUCK Switches',
   price: 16,
@@ -532,23 +605,10 @@ t_shirt = Product.create(
   Made in Melbourne.'
 )
 
-t_shirt_1 = {
+t_shirt.photos.attach(
   io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TSHIRT_PHOTO_1.webp"),
   filename: "TSHIRT_PHOTO_1.webp"
-}
-
-t_shirt_2 = {
-  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TSHIRT_PHOTO_2.webp"),
-  filename: "TSHIRT_PHOTO_2.webp"
-}
-
-t_shirt_3 = {
-  io: URI.open("https://zzyworks-dev.s3.us-west-1.amazonaws.com/TSHIRT_PHOTO_3.webp"),
-  filename: "TSHIRT_PHOTO_3.webp"
-}
-
-t_shirt.photos.attach([t_shirt_1, t_shirt_2, t_shirt_3])
-
+)
 #-------------------------------------------------------------------------------
 
 u80a = Product.create(
@@ -593,6 +653,7 @@ xo_cap.photos.attach([xo_cap_1, xo_cap_2, xo_cap_3])
 
 #-------------------------------------------------------------------------------
 
+puts "Creating reviews..."
 # REVIEWS SEEDS-----------------------------------------------------------------
 
 review_1 = Review.create(

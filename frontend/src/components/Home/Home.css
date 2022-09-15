@@ -31,7 +31,8 @@ button {
 
 .u80,
 .thermal-keeb,
-.grid-keycaps {
+.grid-keycaps, 
+.duck {
     position: relative;
 }
 
@@ -64,13 +65,16 @@ button {
     margin: 0% 15%;
 }
 
-.grid-keycaps img, .thermal-keeb img {
+.grid-keycaps img, 
+.thermal-keeb img, 
+.duck img {
     filter: brightness(50%);
 }
 
 /*----------------------------------------------------------------------------*/
 
-.thermal-keeb .splash-desc {
+.thermal-keeb .splash-desc, 
+.duck .splash-desc {
     margin-top: 10%;
 }
 
@@ -78,7 +82,8 @@ button {
 
 .u80 button,
 .thermal-keeb button,
-.grid-keycaps button {
+.grid-keycaps button,
+.duck button {
     position: absolute;
     z-index: 1;
     background-color: transparent;
@@ -93,7 +98,8 @@ button {
 
 .u80 button:hover,
 .thermal-keeb button:hover,
-.grid-keycaps button:hover {
+.grid-keycaps button:hover,
+.duck button:hover {
     background-color: #ffc80f;
     -webkit-transition: background-color 400ms linear;
     -ms-transition: background-color 400ms linear;

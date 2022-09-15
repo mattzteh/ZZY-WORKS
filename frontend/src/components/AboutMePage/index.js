@@ -15,8 +15,8 @@ const AboutMe = () => {
                 <a href='https://www.github.com/mattzteh' target="_blank">
                     <i className="fa-brands fa-square-github"></i></a>
                 </div>
+                <a href="mattzteh.github.io/DinoTyper">Try out your new Keyboard!</a>
             </div>
-
        </div>
        </>
     )

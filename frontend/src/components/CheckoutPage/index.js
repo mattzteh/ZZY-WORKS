@@ -1,17 +1,20 @@
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useHistory } from "react-router-dom"
-import { deleteCartItem } from "../../store/cart";
+import { deleteCartItem, getCartItems } from "../../store/cart";
 import './CheckoutPage.css'
 const CheckoutPage = () => {
     const dispatch = useDispatch();
     const history = useHistory();
     const currentUser = useSelector(state => state.session.user)
-    const cartItems = useSelector(state => Object.values(state.cartItems))
+    const cartItems = useSelector(getCartItems)
 
     let path = '/'
     
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault(); 
+        cartItems.map(cartItem => (
+            dispatch(deleteCartItem(cartItem.id)))
+        )
         history.push(path)
     }
 

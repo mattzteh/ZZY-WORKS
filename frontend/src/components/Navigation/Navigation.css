@@ -41,11 +41,12 @@
 
 .icons {
     display: flex;
+    justify-content: space-evenly;
     cursor: pointer;
 }
 
 .profile-icon, .search-icon, .cart-icon {
-    margin-left: 40px;
+    margin: 0px 20px;
     font-size: 20px;
 }
 

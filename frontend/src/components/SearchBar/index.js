@@ -13,8 +13,8 @@ const SearchBar = ({closeSearch}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(getSearchedProducts(query))
         closeSearch(false)
+        dispatch(getSearchedProducts(query))
         history.push(path)
     }
 

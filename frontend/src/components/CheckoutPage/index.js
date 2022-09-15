@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useHistory } from "react-router-dom"
+import { deleteCartItem } from "../../store/cart";
 import './CheckoutPage.css'
 const CheckoutPage = () => {
     const dispatch = useDispatch();
@@ -8,10 +9,10 @@ const CheckoutPage = () => {
     const cartItems = useSelector(state => Object.values(state.cartItems))
 
     let path = '/'
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         history.push(path)
-
     }
 
     return (

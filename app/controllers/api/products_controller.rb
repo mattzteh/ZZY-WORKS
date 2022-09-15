@@ -17,7 +17,8 @@ class Api::ProductsController < ApplicationController
         if @products.length > 0
             render :index
         else
-            render json: ["No matches."], status: 404
+            # render json: ["No matches."], status: 404
+            render :index
         end
     end
 

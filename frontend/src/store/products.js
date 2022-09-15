@@ -54,7 +54,7 @@ export const fetchProduct = (productId) => async dispatch => {
 
 export const getSearchedProducts = (query) => async dispatch => {
     const response = await csrfFetch(`/api/products/search/${query}`)
-    if (response.status >= 400) throw response;
+    // if (response.status >= 400) throw response;
     
     // if (response.status >= 400) {
     //     const errors = await response.text()

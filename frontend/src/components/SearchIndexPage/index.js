@@ -14,14 +14,7 @@ const SearchIndexPage = () => {
         )
     } else {
         component = (  
-            <></>   
-    )}
-    
-    if(!products.length) return null
-
-    return (
-        <>
-        {component}
+            <>
             <div className="products">
                 <ul >
                     {
@@ -32,6 +25,14 @@ const SearchIndexPage = () => {
                         }
                 </ul>
             </div>
+            </>   
+    )}
+    
+    // if(!products.length) return null
+
+    return (
+        <>
+        {component}
         </>
     )
 }

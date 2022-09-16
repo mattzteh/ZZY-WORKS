@@ -1,24 +1,4 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[ZZY WORKS](https://zzyworks.herokuapp.com/) is a clone of RAMA WORKS, an e-commerce keyboard company based in Australia.
+This app used Ruby on Rails as its backend, and JavaScript, Redux + ReactJs as its frontend.

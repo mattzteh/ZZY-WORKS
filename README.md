@@ -13,7 +13,9 @@ This app used Ruby on Rails as its backend, and JavaScript, Redux + ReactJs as i
 * Create an account
 * Demo User with full functionality
 * Search Bar to look for specific products
-* Add/remove from cart that keeps track of quantity per product (can increment/decrement quantity within cart)
+* Add/remove from cart that keeps track of quantity per product (can increment/decrement quantity within cart):
+<img width="1440" alt="Screen Shot 2022-09-16 at 9 47 39 AM" src="https://user-images.githubusercontent.com/104236905/190689239-56e517b6-9a40-4b15-83dd-23cc5c75057a.png">
+
 
 
 <h2>Product Show Page</h2>

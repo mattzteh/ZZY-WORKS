@@ -3,6 +3,7 @@
     color: #1c1d1d;
     font-family: 'Varela Round', 'sans-serif';
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 button {

@@ -8,8 +8,19 @@ const ReviewIndex = () => {
     const reviews = useSelector(getReviews)
     const sessionUser = useSelector(state => state.session.user);
 
+    function _isContains(json, value) {
+        let contains = false;
+        Object.keys(json).some(key => {
+            contains = typeof(json[key]) == 'object' ?
+            _isContains(json[key], value) : json[key] === value;
+            return contains;
+        })
+        return contains
+    }
+
+
     let modalButton;
-    if (sessionUser) {
+    if (sessionUser && !(_isContains(reviews, sessionUser.id))) {
         modalButton = (
         <ReviewFormModal/>
         )

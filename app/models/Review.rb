@@ -15,6 +15,7 @@ class Review < ApplicationRecord
 
     validates :rating, :title, :body, presence: true, length: {minimum: 1}
     validates :rating, numericality: { in: 1..5 }
+    validates :product_id, uniqueness: { scope: :user_id, message: 'You have reviewed this product!'}
 
 #-------------------------------------------------------------------------------
 

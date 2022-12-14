@@ -11,7 +11,7 @@ const Home = () => {
     <div className="splashpage">
 
         <div className="u80">
-            <img src={u80Splash}></img>
+            <img src={u80Splash} alt="splash1"></img>
         </div>
 
         <div className='thermal-keeb'>
@@ -19,7 +19,7 @@ const Home = () => {
                 <h1>THERMAL SEQ2 KEYBOARD</h1>
                 <Link to="/products/1"><button>BUY</button></Link>
             </div>
-            <img src={thermalSplash}></img>
+            <img src={thermalSplash} alt="splash2"></img>
         </div>
 
         <div className="duck">
@@ -28,7 +28,7 @@ const Home = () => {
                 <h2>LINEAR SWITCHES</h2>
                 <Link to="/products/2"><button>BUY</button></Link>
             </div>
-            <img src={duckSplash}></img>
+            <img src={duckSplash} alt="duck-switches"></img>
         </div>
 
         <div className="grid-keycaps">
@@ -37,7 +37,7 @@ const Home = () => {
                 <h2>MX CHICLETS / KEYCAPS</h2>
                 <Link to="/products/3"><button>BUY</button></Link>
             </div>
-            <img src={keycapSplash}></img>
+            <img src={keycapSplash} alt="keycaps"></img>
         </div>
 
     </div>

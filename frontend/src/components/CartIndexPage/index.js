@@ -10,7 +10,7 @@ const CartIndexPage = ({closeCartMenu}) => {
     const cartItems = useSelector(getCartItems);
 
     let cartMessage;
-    if (cartItems.length == 0) {
+    if (cartItems.length === 0) {
         cartMessage = (
             <p className='cart-message'>Your cart is currently empty.</p>
         )
@@ -25,9 +25,6 @@ const CartIndexPage = ({closeCartMenu}) => {
             </Link>
         )
     }
-
-
-
 
     useEffect(() => {
         dispatch(fetchCartItems());

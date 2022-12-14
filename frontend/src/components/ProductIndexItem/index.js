@@ -43,7 +43,7 @@ const ProductIndexPage = ({product}) => {
         onMouseEnter={() => (setOnHover(true), setHoverPhoto(photo2))}
         onMouseLeave={() => (setOnHover(false), setHoverPhoto(photo))}>
             <div className='product-index'>
-                <img className='product-photo' src={hoverPhoto}/>
+                <img className='product-photo' src={hoverPhoto} alt="product-photo"/>
                 <h1>{product.name}</h1>
                 <h2>${product.price}.00</h2>         
             </div>

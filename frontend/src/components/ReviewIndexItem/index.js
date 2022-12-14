@@ -10,7 +10,7 @@ const ReviewIndexItem = ({review}) => {
 
     let reviewButtons;
 
-    if (review.userId == currentUserId) {
+    if (review.userId === currentUserId) {
         reviewButtons = (
         <>
             <EditReviewFormModal review={review}><button className='review-buttons'></button></EditReviewFormModal>

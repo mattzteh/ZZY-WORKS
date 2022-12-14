@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { updateReview } from "../../store/reviews";
 import { useState } from "react";
 

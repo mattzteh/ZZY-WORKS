@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Modal } from '../../context/Modal';
-import { useSelector } from 'react-redux';
 import ReviewForm from './ReviewForm';
 import './ReviewForm.css'
 

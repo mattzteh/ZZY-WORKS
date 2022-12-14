@@ -42,7 +42,7 @@ const ProductShowPage = () => {
         <div className='showpage'>
 
             <div className='left-column'>
-                <img src={photo}/>
+                <img src={photo} alt="product-image"/>
             </div>
 
             <div className='right-column'>

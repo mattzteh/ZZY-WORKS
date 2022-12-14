@@ -21,7 +21,7 @@ const CartIndexItem = ({cartItem}) => {
         <>
         <div className='cart-index-item'>
             <div className='cart-photo'>
-                <Link to={`/products/${cartItem.productId}`}><img src={photo}/></Link>
+                <Link to={`/products/${cartItem.productId}`}><img src={photo} alt="cart-item-photo"/></Link>
             </div>
 
             <h1 className='cart-index-item-name'>{cartItem.name}</h1>
